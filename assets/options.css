@@ -1,0 +1,44 @@
+.options {
+  min-height: 100px;
+  border-bottom: 1px solid lightgrey;
+}
+.options-menu {
+  position: relative;
+  overflow: hidden;
+  min-height: 100px;
+}
+.options-menu> div {
+  overflow: hidden;
+  margin: 20px 0 20px 0;
+}
+.options-button {
+  height: 45px;
+  min-width: 22px;
+  background: #FFFFFF no-repeat center;
+  border-radius: 25px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 0 20px 0 20px;
+  margin-right: 9px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  float: left;
+}
+
+.options-button-selected, .options-button:hover {
+  background-color: #ADCD08;
+  box-shadow: 0px 4px 8px rgba(181, 201, 78, 0.4);
+  color: white;
+}
+
+.options-button-icon {
+  min-width: 62px;
+  background-image: url('img/group.svg');
+}
+
+.options-button-icon:hover {
+  background-image: url('img/group-selected.svg');
+}

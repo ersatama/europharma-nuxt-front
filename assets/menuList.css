@@ -1,0 +1,92 @@
+.menu-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 150px;
+  background: white;
+  top: 94px;
+  z-index: 15;
+  border-top: 1px solid #CDD3DC;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
+}
+.menu-list > div {
+  display: grid;
+  grid-template-columns: 315px auto;
+  min-height: 338px;
+  overflow: hidden;
+  margin-left: 56px;
+  margin-right: 56px;
+  grid-gap: 10px;
+}
+.menu-list-content {
+  height: max-content;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  border-right: 1px solid #E3E4E5;
+}
+.menu-list-content-item-icon {
+  width: 24px;
+  height: 24px;
+  background: no-repeat center;
+  background-size: contain;
+  float: left;
+  margin-right: 12px;
+}
+.menu-list-content-item {
+  border-radius: 8px 0 0 8px;
+  border: none;
+  height: 47px;
+  cursor: pointer;
+  background: #fff;
+  text-align: left;
+  padding: 0 16px 0 16px;
+  font-size: 14px;
+  outline: none !important;
+  color: #37424D;
+  position: relative;
+}
+.menu-list-content-item:after {
+  content: '';
+  position: absolute;
+  background: url('../static/img/arrow.png') no-repeat center;
+  width: 10px;
+  height: 12px;
+  top: 50%;
+  right: 15px;
+  transform: translate(0,-50%);
+}
+.menu-list-content-item > span {
+  color: grey;
+}
+.menu-list-content-item:hover, .menu-list-content-item-sel {
+  background: #EFEFEF;
+}
+.menu-list-right-title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #37424D;
+  margin: 40px 0 0 20px;
+}
+.menu-list-right-all {
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  grid-row-gap: 20px;
+  margin: 24px 0 0 20px;
+}
+.menu-list-right-item-title {
+  font-weight: bold;
+  color: #37424D;
+}
+.menu-list-right-item-all {
+  margin-top: 16px;
+  display: grid;
+  grid-gap: 8px;
+}
+.menu-list-right-item-self {
+  font-size: 14px;
+  color: #989898;
+  cursor: pointer;
+}
+.menu-list-right-item-self:hover {
+  color: #9BB603;
+}

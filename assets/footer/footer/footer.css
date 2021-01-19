@@ -1,0 +1,46 @@
+.footer-footer {
+  height: 105px;
+  background: #C5DA5A;
+  overflow: hidden;
+  display: flex;
+}
+.footer-footer > div {
+  margin: 0 166px 0 166px;
+  align-self: center;
+  width: 100%;
+  overflow: hidden;
+}
+.footer-footer-title {
+  float: left;
+  font-size: 20px;
+  color: #37424D;
+}
+.footer-footer-icons {
+  float: right;
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  grid-gap: 20px;
+}
+.footer-footer-icons > div {
+  cursor: pointer;
+}
+.footer-footer-youtube {
+  background: url('../../img/youtube.svg') no-repeat center;
+  width: 44px;
+  height: 35px;
+}
+.footer-footer-facebook {
+  background: url('../../img/facebook.svg') no-repeat center;
+  width: 35px;
+  height: 35px;
+}
+.footer-footer-instagram {
+  background: url('../../img/instagram.svg') no-repeat center;
+  width: 35px;
+  height: 35px;
+}
+.footer-footer-whatsapp {
+  background: url('../../img/whatsapp.svg') no-repeat center;
+  width: 35px;
+  height: 35px;
+}

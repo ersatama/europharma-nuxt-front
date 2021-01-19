@@ -1,0 +1,8 @@
+.content-body {
+  margin: 0 64px 0 64px;
+}
+.content-body-main {
+  display: grid;
+  grid-template-columns: auto 390px;
+  grid-gap: 16px;
+}

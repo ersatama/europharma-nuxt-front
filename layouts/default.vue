@@ -5,9 +5,11 @@
 </template>
 
 <style>
+
 body {
   background: #E5E5E5;
 }
+
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
@@ -52,5 +54,6 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
 </style>
 

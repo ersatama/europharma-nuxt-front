@@ -1,0 +1,15 @@
+.basket-content {
+  overflow: hidden;
+}
+.basket-content-menu {
+  border: 2px solid #EDECEE;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 16px;
+  max-height: 700px !important;
+  height: 700px;
+}
+.basket-content-button {
+  background: #37424D;
+}
