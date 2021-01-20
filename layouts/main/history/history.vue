@@ -2,7 +2,9 @@
   <div>
     <div class="main-body-title main-body-title-next">
       <span>Истории</span>
-      <div class="main-body-title-all">Перейти к историям</div>
+      <NuxtLink to="/history">
+        <div class="main-body-title-all">Перейти к историям</div>
+      </NuxtLink>
     </div>
     <div class="history-main">
       <swiper ref="swiper" :options="historyOptions">
@@ -79,7 +81,7 @@ export default {
   directives: {
     swiper: directive
   },
-  name: "HistoryItems",
+  name: "history",
 }
 </script>
 

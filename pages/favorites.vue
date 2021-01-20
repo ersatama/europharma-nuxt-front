@@ -2,30 +2,28 @@
   <div>
     <headerContent></headerContent>
     <subMenu></subMenu>
-    <breadCrumb :path="path"></breadCrumb>
+    <div class="container-fluid m-0 p-0">
+      <favoritesBody></favoritesBody>
+    </div>
     <footerContent></footerContent>
   </div>
 </template>
 
 <script>
+
 import headerContent from '/layouts/header/headerContent.vue'
 import subMenu from '/layouts/header/subMenu.vue'
-import breadCrumb from '/layouts/header/breadCrumb.vue'
+import favoritesBody from '/layouts/body/favorites-body.vue'
 import footerContent from '/layouts/footer/FooterContent.vue'
 
 export default {
+  name: "favorites",
   components: {
     headerContent,
     subMenu,
-    breadCrumb,
-    footerContent
-  },
-  name: "about",
-  data() {
-    return {
-      path: ['Главная','О нас']
-    }
-  },
+    footerContent,
+    favoritesBody
+  }
 }
 </script>
 

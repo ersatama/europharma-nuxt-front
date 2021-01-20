@@ -7,16 +7,9 @@
         <div class="footer-body-left-title">Показать все ></div>
       </div>
       <div class="footer-body-right">
-        <div class="footer-body-right-title font-weight-bold">О компании</div>
-        <div class="footer-body-right-title">Стать партнёром</div>
-        <div class="footer-body-right-title">Контакты</div>
-        <div class="footer-body-right-title">Стать курьером</div>
-        <div class="footer-body-right-title">Доставка</div>
-        <div class="footer-body-right-title">Для бизнеса</div>
-        <div class="footer-body-right-title">Пользовательское соглашение</div>
-        <div class="footer-body-right-title">Переработка пластика</div>
-        <div class="footer-body-right-title">Вопросы и ответы</div>
-        <div class="footer-body-right-title">Обратная связь</div>
+        <NuxtLink :to="item.url" v-for="(item,index) in menu" :key="index">
+          <div class="footer-body-right-title" :class="[(item.url === sel)?'font-weight-bold':'']">{{ item.title }}</div>
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -26,6 +19,7 @@ export default {
   name: "FooterBodyContent",
   data() {
     return {
+      sel: '',
       regions: [
         {
           title: 'Алматы',
@@ -45,8 +39,53 @@ export default {
         {
           title: 'Караганды',
         },
+      ],
+      menu: [
+        {
+          url: '/about',
+          title: 'О компании',
+        },
+        {
+          url: '/partner',
+          title: 'Стать партнёром',
+        },
+        {
+          url: '/contacts',
+          title: 'Контакты',
+        },
+        {
+          url: '/courier',
+          title: 'Стать курьером',
+        },
+        {
+          url: '/delivery',
+          title: 'Доставка',
+        },
+        {
+          url: '/business',
+          title: 'Для бизнеса',
+        },
+        {
+          url: '/terms',
+          title: 'Пользовательское соглашение',
+        },
+        {
+          url: '/recycling',
+          title: 'Переработка пластика',
+        },
+        {
+          url: '/faq',
+          title: 'Вопросы и ответы',
+        },
+        {
+          url: '/feedback',
+          title: 'Обратная связь'
+        }
       ]
     }
+  },
+  mounted() {
+    this.sel  = window.location.pathname;
   }
 }
 </script>

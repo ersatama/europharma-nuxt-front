@@ -2,7 +2,9 @@
   <div>
     <div class="main-body-title main-body-title-next">
       <span>Популярные бренды</span>
-      <div class="main-body-title-all">посмотреть все</div>
+      <NuxtLink to="/brands">
+        <div class="main-body-title-all">посмотреть все</div>
+      </NuxtLink>
     </div>
     <div class="brands">
       <div class="brand" v-for="(brand,index) in brands" :key="index" :style="{'background-image': 'url('+brand.url+')'}"></div>
@@ -50,7 +52,7 @@ export default {
   .brands {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-column-gap: 30px;
+    grid-gap: 30px;
     margin-top: 20px;
   }
   .brand {

@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       settings: {
-        apiKey: '5e3d5db5-5b87-4dfd-91a7-9b68d24b61b8',
+        apiKey: '8e90d07a-e408-4093-96da-6926fde0422b',
         lang: 'ru_RU',
         coordorder: 'latlong',
         version: '2.1'

@@ -6,7 +6,6 @@
   background: white;
   top: 94px;
   z-index: 15;
-  border-top: 1px solid #CDD3DC;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
 }
 .menu-list > div {

@@ -2,3 +2,43 @@
   margin: 0 0 0 0;
   position: relative;
 }
+
+.slide {
+  height: 250px;
+  margin: 10px 20px 0 0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.slide-content {
+  position: absolute;
+  z-index: 5;
+  bottom: 20px;
+  left: 30px;
+}
+.slide-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.slide-desc {
+  font-size: 18px;
+}
+.slider-next, .slider-prev {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+  transform: translate(0,-40%);
+  background: url('img/next.svg') #fff no-repeat center;
+  cursor: pointer;
+}
+.slider-next {
+  left: 50px;
+}
+.slider-prev {
+  right: 50px;
+  transform: translate(0,-40%) rotate(180deg);
+}

@@ -21,6 +21,7 @@
 }
 .footer-body-left-title, .footer-body-right-title {
   cursor: pointer;
+  color: #989898;
 }
 .footer-body-right {
   float: right;
