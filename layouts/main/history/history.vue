@@ -2,16 +2,19 @@
   <div>
     <div class="main-body-title main-body-title-next">
       <span>Истории</span>
-      <NuxtLink to="/history">
+      <NuxtLink :to="prefix">
         <div class="main-body-title-all">Перейти к историям</div>
       </NuxtLink>
     </div>
     <div class="history-main">
+
       <swiper ref="swiper" :options="historyOptions">
-        <div class="swiper-slide history-slide" :key="slide.url" v-for="slide in slider">
-          <div class="history-slide-title">{{slide.title}}</div>
-          <img :src="slide.url" width="184" height="244" alt="">
-        </div>
+        <NuxtLink :to="prefix+slide.url" :key="index" v-for="(slide,index) in slider">
+          <div class="swiper-slide history-slide">
+            <div class="history-slide-title">{{slide.title}}</div>
+            <img :src="slide.img" width="184" height="244" alt="">
+          </div>
+        </NuxtLink>
       </swiper>
       <div class="history-prev"></div>
       <div class="history-next"></div>
@@ -20,10 +23,12 @@
 </template>
 
 <script>
+import axios from "axios";
 import { Swiper, SwiperSlide, directive} from 'vue-awesome-swiper'
 export default {
   data() {
     return {
+      prefix: '/history',
       historyOptions: {
         navigation: {
           nextEl: '.history-prev',
@@ -35,43 +40,7 @@ export default {
         loop: true,
         loopFillGroupWithBlank: true,
       },
-      slider: [
-        {
-          url: 'img/h-1.png',
-          title: 'Выгодная покупка',
-          desc: 'Тысячи товаров со скидкой',
-        },
-        {
-          url: 'img/h-2.png',
-          title: 'Доставка без уловок',
-          desc: 'Тысячи товаров со скидкой',
-        },
-        {
-          url: 'img/h-3.png',
-          title: 'Интерьер на даче',
-          desc: 'Тысячи товаров со скидкой',
-        },
-        {
-          url: 'img/h-4.png',
-          title: 'Скидки каждый день',
-          desc: 'Тысячи товаров со скидкой',
-        },
-        {
-          url: 'img/h-5.png',
-          title: 'По городу ветерком',
-          desc: 'Тысячи товаров со скидкой',
-        },
-        {
-          url: 'img/h-5.png',
-          title: 'По городу ветерком',
-          desc: 'Тысячи товаров со скидкой',
-        },
-        {
-          url: 'img/h-5.png',
-          title: 'По городу ветерком',
-          desc: 'Тысячи товаров со скидкой',
-        },
-      ]
+      slider: []
     }
   },
   components: {
@@ -82,6 +51,18 @@ export default {
     swiper: directive
   },
   name: "history",
+  created() {
+    this.getStories();
+  },
+  methods: {
+    getStories() {
+      let self  = this;
+      axios.get('http://127.0.0.1:8000/web/stories')
+        .then(function (response) {
+          self.slider = response.data;
+        });
+    }
+  }
 }
 </script>
 

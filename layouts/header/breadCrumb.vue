@@ -10,11 +10,22 @@ export default {
       url: ''
     }
   },
-  mounted() {
-    this.path.forEach(function callback(currentValue, index, array) {
-      array[index] = '<span>'+currentValue+'</span>';
-    });
-    this.url  = this.path.join(' > ');
+  watch: {
+    url: function() {
+      this.pathHtml();
+    }
+  },
+  created() {
+    this.pathHtml();
+  },
+  methods: {
+    pathHtml() {
+      let path  = [];
+      this.path.forEach(function callback(currentValue, index, array) {
+        path.push('<span>'+currentValue+'</span>');
+      });
+      this.url  = path.join(' > ');
+    }
   }
 }
 </script>

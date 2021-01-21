@@ -2,6 +2,15 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: 'catchall',
+        path: '/products/',
+        component: resolve(__dirname, 'pages/products/catchallpage.vue')
+      })
+    }
+  },
   modules: ['bootstrap-vue/nuxt'],
   head: {
     title: 'europharma',

@@ -7,21 +7,23 @@
   display: inline-flex;
   overflow: hidden;
 }
+.product-menu-list > a {
+  margin: 0 12px 0 12px;
+}
+.product-menu-list > a:first-child {
+  margin-left: 0;
+}
+.product-menu-list > a:last-child {
+  margin-right: 0;
+}
 .product-slide {
   overflow: hidden;
   width: 160px !important;
   height: 160px !important;
   border-radius: 8px;
   border: 2px solid #EDECEE;
-  margin: 0 12px 0 12px;
   position: relative;
   cursor: pointer;
-}
-.product-slide:first-child {
-  margin-left: 0;
-}
-.product-slide:last-child {
-  margin-right: 0;
 }
 .product-slide:hover, .product-slide-sel {
   color: #C5E319;

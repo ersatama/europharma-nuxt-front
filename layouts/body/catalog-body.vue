@@ -1,9 +1,8 @@
 <template>
   <div class="main-body">
     <div class="main-body-left">
-      <div class="main-body-title"><span>Популярные товары</span></div>
-      <productMenu :url="url"></productMenu>
-      <listBody :list="items"></listBody>
+      <div class="main-body-title"><span>Каталог</span></div>
+      <catalogBody :list="items"></catalogBody>
     </div>
     <div class="main-body-right">
       <basket></basket>
@@ -12,30 +11,29 @@
 </template>
 
 <script>
+
 import axios from "axios";
 import basket from '/layouts/basket/Basket.vue'
-import productMenu from '/layouts/product/productMenu'
-import listBody from '/layouts/body/list'
+import catalogBody from '/layouts/body/catalog'
+
 export default {
-  name: "popular-body",
   components: {
     basket,
-    productMenu,
-    listBody
+    catalogBody
   },
+  name: "catalog-body",
   data() {
     return {
-      url: '/',
       items: []
     }
   },
   created() {
-    this.getPopularProducts();
+    this.getMenu();
   },
   methods: {
-    getPopularProducts() {
+    getMenu() {
       let self  = this;
-      axios.get('http://127.0.0.1:8000/web/products/popular')
+      axios.get('http://127.0.0.1:8000/web/menu')
         .then(function (response) {
           self.items = response.data;
         });

@@ -5,7 +5,7 @@
       <div class="menu">
         <button class="menu-item" :class="[(sel === index)?'menu-item-sel':'']" v-for="(field,index) in menu" :key="index" @click="sel = index">{{field.title}}</button>
       </div>
-      <productMenu :id="0"></productMenu>
+      <productMenu :url="url"></productMenu>
       <listBody :list="items"></listBody>
     </div>
     <div class="main-body-right">
@@ -15,9 +15,12 @@
 </template>
 
 <script>
+
+import axios from "axios";
 import basket from '/layouts/basket/Basket.vue'
 import productMenu from '/layouts/product/productMenu'
 import listBody from '/layouts/body/list'
+
 export default {
   name: "special-body",
   components: {
@@ -27,6 +30,7 @@ export default {
   },
   data() {
     return {
+      url: '/',
       sel: 0,
       menu: [
         {
@@ -39,80 +43,19 @@ export default {
           title: 'Комплекты',
         },
       ],
-      items: [
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        }
-      ]
+      items: []
+    }
+  },
+  created() {
+    this.getSpecialProducts();
+  },
+  methods: {
+    getSpecialProducts() {
+      let self  = this;
+      axios.get('http://127.0.0.1:8000/web/products/special')
+        .then(function (response) {
+          self.items = response.data;
+        });
     }
   }
 }

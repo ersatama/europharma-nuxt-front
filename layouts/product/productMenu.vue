@@ -1,14 +1,20 @@
 <template>
   <div class="product-menu">
       <div class="product-menu-list">
-        <div class="product-slide" :class="[(id === index)?'product-slide-sel':'']" v-for="(slide,index) in slider" :key="index">
-          <div class="product-slide-img" :style="{'background-image':'url('+slide.url+')'}"></div>
+        <div class="product-slide" :class="[(url === slide.url)?'product-slide-sel':'']">
+          <div class="product-slide-img" :style="{'background-image':'url('+slide.logo+')'}"></div>
           <div class="product-slide-content">
-            <div>
-              {{slide.title}}
-            </div>
+            <div>{{slide.title}}</div>
           </div>
         </div>
+        <NuxtLink :to="prefix+slide.url" v-for="(slide,index) in slider" :key="index">
+          <div class="product-slide" :class="[(url === slide.url)?'product-slide-sel':'']">
+            <div class="product-slide-img" :style="{'background-image':'url('+slide.logo+')'}"></div>
+            <div class="product-slide-content">
+              <div>{{slide.title}}</div>
+            </div>
+          </div>
+        </NuxtLink>
       </div>
     <div class="product-slide-next"></div>
     <div class="product-slide-prev"></div>
@@ -16,67 +22,34 @@
 </template>
 
 <script>
-
+import axios from "axios";
 export default {
-  props: ['id'],
+  props: ['url'],
   name: "productMenu",
   data() {
     return {
-      slider: [
-        {
-          url: '../img/emart-logo.png',
-          title: 'Все товары',
-        },
-      ]
+      prefix: '/catalog',
+      slide: {
+        url: '/',
+        logo: '../img/emart-logo.png',
+        title: 'Все товары',
+      },
+      slider: []
     }
   },
-  mounted() {
-    this.get();
+  created() {
+    this.getMenu();
   },
   methods: {
-    get() {
-      let menu  = [
-        {
-          url: '../img/smartphone.svg',
-          title: 'Смартфоны и гаджеты',
-        },
-        {
-          url: '../img/laptop-computer.svg',
-          title: 'Ноутбуки и компьютеры',
-        },
-        {
-          url: '../img/game.svg',
-          title: 'Игры',
-        },
-        {
-          url: '../img/home.svg',
-          title: 'Все для дома',
-        },
-        {
-          url: '../img/bread.svg',
-          title: 'Продукты',
-        },
-        {
-          url: '../img/open-book.svg',
-          title: 'Книги',
-        },
-        {
-          url: '../img/gym.svg',
-          title: 'Спорт и хобби',
-        },
-        {
-          url: '',
-          title: 'Детям',
-        },
-        {
-          url: '',
-          title: 'Красота',
-        }
-      ];
+    getMenu() {
       let self  = this;
-      menu.forEach(function callback(currentValue, index, array) {
-        self.slider.push(currentValue);
-      });
+      axios.get('http://127.0.0.1:8000/web/menu')
+        .then(function (response) {
+          let menu = response.data;
+          menu.forEach(function callback(currentValue, index, array) {
+            self.slider.push(currentValue);
+          });
+        });
     }
   }
 }
