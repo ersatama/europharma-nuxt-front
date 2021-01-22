@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import headerContent from "@/layouts/header/headerContent";
-import subMenu from "@/layouts/header/subMenu";
+import headerContent from "@/layouts/header/header-content";
+import subMenu from "@/layouts/header/sub-menu";
 import specialBody from '@/layouts/body/special-body';
 import footerContent from "@/layouts/footer/FooterContent";
 

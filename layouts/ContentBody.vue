@@ -131,6 +131,6 @@ export default {
 @import '../assets/contentBody.css';
 @import '../assets/basket.css';
 @import '../assets/options.css';
-@import '../assets/list.css';
+@import '../assets/menu/list.css';
 </style>
 

@@ -2,24 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="444cd090-21bd-4840-8b4d-57c9b86d9e29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/layouts/body/catalog-body.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/body/catalog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/body/dynamic-catalog-body.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/catalog/_slug.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/catalog/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/products/catchallpage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/header/bread-crumb.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/header/sub-menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/loader.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/loader/loader.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/body/dynamic-catalog-product-body.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/body/list-menu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/header/bread-crumb.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/loader/loader.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/not-found/not-found.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/catalog/_product/_slug.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/product/productMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/product/productMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/list.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/menuList.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/menu/list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/ContentBody.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/ContentBody.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/MenuList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/MenuList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/body/popular-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/popular-body.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/body/special-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/special-body.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/header/breadCrumb.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/header/breadCrumb.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/main/history/history.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/main/history/history.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/product/productMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/product/productMenu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/gym.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/gym.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/body/dynamic-catalog-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/dynamic-catalog-body.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/header/breadCrumb.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/header/headerContent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/header/header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/header/subMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/header/sub-menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/catalog/_slug.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/_slug.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/catalog/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/catalog/popular.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/popular.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/catalog/recently.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/recently.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/catalog/special.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/special.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/favorites.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/favorites.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/history.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/history.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +45,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="package.json" />
-        <option value="CSS File" />
         <option value="Vue Single File Component" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -89,11 +100,11 @@
       <recent name="C:\OpenServer\domains\europharma.kz\europharma.kz\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\assets\header" />
+      <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\assets\menu" />
+      <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\assets\img" />
+      <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\assets" />
       <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\pages\products" />
-      <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\pages\catalog" />
-      <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\assets\main" />
-      <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\layouts\main\popular" />
-      <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\layouts\main\special" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -144,6 +155,7 @@
       <workItem from="1611212298300" duration="3243000" />
       <workItem from="1611216985299" duration="1222000" />
       <workItem from="1611224584194" duration="11444000" />
+      <workItem from="1611295580159" duration="21552000" />
     </task>
     <servers />
   </component>

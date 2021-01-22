@@ -52,6 +52,6 @@ export default {
 }
 </script>
 <style>
-@import 'assets/menuList.css';
+@import 'assets/menu/list.css';
 </style>
 

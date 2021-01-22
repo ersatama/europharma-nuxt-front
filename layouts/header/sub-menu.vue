@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "subMenu",
+  name: "sub-menu",
   data() {
     return {
       submenu: [
@@ -46,14 +46,5 @@ export default {
 </script>
 
 <style>
-.sub-menu {
-  margin: 20px auto 20px auto;
-  display: flex;
-  justify-content: center;
-}
-.sub-menu-item {
-  font-size: 18px;
-  color: #37424D;
-  margin: 0 10px 0 10px;
-}
+@import "assets/header/sub-menu.css";
 </style>

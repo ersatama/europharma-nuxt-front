@@ -13,9 +13,9 @@
   grid-template-columns: 315px auto;
   min-height: 338px;
   overflow: hidden;
-  margin-left: 56px;
-  margin-right: 56px;
   grid-gap: 10px;
+  max-width: 1600px;
+  margin: 0 auto 0 auto;
 }
 .menu-list-content {
   height: max-content;
@@ -47,7 +47,7 @@
 .menu-list-content-item:after {
   content: '';
   position: absolute;
-  background: url('../static/img/arrow.png') no-repeat center;
+  background: url('../../static/img/arrow.png') no-repeat center;
   width: 10px;
   height: 12px;
   top: 50%;

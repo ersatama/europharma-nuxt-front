@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import headerContent from '/layouts/header/headerContent.vue'
-import subMenu from '/layouts/header/subMenu.vue'
-import breadCrumb from '/layouts/header/breadCrumb.vue'
+import headerContent from '/layouts/header/header-content.vue'
+import subMenu from '/layouts/header/sub-menu.vue'
+import breadCrumb from '/layouts/header/bread-crumb.vue'
 import footerContent from "@/layouts/footer/FooterContent";
 import dynamicCatalogBody from '/layouts/body/dynamic-catalog-body'
 import axios from "axios";
@@ -30,7 +30,7 @@ export default {
   },
   data() {
     return {
-      path:   ['Главная','Каталог'],
+      path:   [['Главная',''],['Каталог','/catalog']],
       title: ''
     }
   },
@@ -41,7 +41,7 @@ export default {
       axios.get('http://127.0.0.1:8000/web/menu/slug/'+path[2])
         .then(function (response) {
           let data    = response.data;
-          self.title  = data;
+          self.title  = data[0];
           self.path.push(data);
         });
     }

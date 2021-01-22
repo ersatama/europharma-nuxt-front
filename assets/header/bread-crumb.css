@@ -1,0 +1,36 @@
+.breadcrumb-title {
+  font-size: 16px;
+  line-height: 20px;
+  color: #A2A2A2;
+  margin: 30px 0 30px 64px;
+}
+.breadcrumb-title > a {
+  color: #A2A2A2;
+}
+.breadcrumb-title > a:last-child {
+  color: #C5E319;
+}
+.breadcrumb-title > a > span:hover {
+  text-decoration: underline !important;
+}
+.divider {
+  display: inline-flex;
+  height: 10px;
+  width: 10px;
+  margin: 0 10px 0 10px;
+  position: relative;
+}
+.divider:before, .divider:after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  background: #A2A2A2;
+  transform: rotate(45deg);
+  top: 3px;
+  left: 3px;
+}
+.divider:after {
+  transform: rotate(-45deg);
+  top: 5px;
+}

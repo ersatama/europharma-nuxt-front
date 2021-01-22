@@ -1,0 +1,6 @@
+.loader {
+  width: 88px;
+  height: 88px;
+  background: url('../img/loader.svg');
+  margin: 150px auto 150px auto;
+}

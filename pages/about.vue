@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import headerContent from '/layouts/header/headerContent.vue'
-import subMenu from '/layouts/header/subMenu.vue'
-import breadCrumb from '/layouts/header/breadCrumb.vue'
+import headerContent from '/layouts/header/header-content.vue'
+import subMenu from '/layouts/header/sub-menu.vue'
+import breadCrumb from '/layouts/header/bread-crumb.vue'
 import footerContent from '/layouts/footer/FooterContent.vue'
 
 export default {

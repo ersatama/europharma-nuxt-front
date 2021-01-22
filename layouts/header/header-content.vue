@@ -45,7 +45,7 @@ export default {
     modalMap,
     MenuList,
   },
-  name: "headerContent",
+  name: "header-content",
   data() {
     return {
       menu: false,
@@ -57,8 +57,5 @@ export default {
 </script>
 
 <style>
-@import 'assets/header.css';
-body {
-  background: #fff !important;
-}
+@import 'assets/header/header-content.css';
 </style>

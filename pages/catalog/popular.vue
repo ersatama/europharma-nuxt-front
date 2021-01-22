@@ -10,8 +10,8 @@
 </template>
 <script>
 
-import headerContent from '~/layouts/header/headerContent.vue'
-import subMenu from "~/layouts/header/subMenu"
+import headerContent from '@/layouts/header/header-content.vue'
+import subMenu from "@/layouts/header/sub-menu"
 import popularBody from '~/layouts/body/popular-body';
 import footerContent from "~/layouts/footer/FooterContent"
 

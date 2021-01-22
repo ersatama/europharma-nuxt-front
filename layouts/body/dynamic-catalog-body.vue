@@ -2,7 +2,8 @@
   <div class="main-body">
     <div class="main-body-left">
       <div class="main-body-title"><span>{{title}}</span></div>
-
+      <productMenu :url="url"></productMenu>
+      <listMenu :list="items"></listMenu>
     </div>
     <div class="main-body-right">
       <basket></basket>
@@ -14,17 +15,36 @@
 
 import axios from "axios";
 import basket from '/layouts/basket/Basket.vue'
-import catalogBody from "@/layouts/body/catalog";
-
+import productMenu from '/layouts/product/productMenu'
+import listBody from '/layouts/body/list'
+import listMenu from '/layouts/body/list-menu'
 export default {
   props: ['title'],
   components: {
     basket,
+    productMenu,
+    listMenu
   },
   name: "dynamic-catalog-body",
   data() {
-    return {}
+    return {
+      url:  '/'+this.$route.path.split('/')[2],
+      items: []
+    }
   },
+  created() {
+    this.getProductsBySlug();
+  },
+  methods: {
+    getProductsBySlug() {
+      let slug  = this.$route.path.split('/')[2];
+      let self  = this;
+      axios.get('http://127.0.0.1:8000/web/products/slug/'+slug)
+        .then(function (response) {
+          self.items = response.data;
+        });
+    }
+  }
 }
 
 </script>
