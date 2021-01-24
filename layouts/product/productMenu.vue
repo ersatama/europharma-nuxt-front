@@ -57,6 +57,6 @@ export default {
 
 <style>
 @import 'assets/product/productMenu.css';
-@import 'assets/swiper.min.css';
-@import 'assets/carousel.css';
+@import '../../assets/header/swiper/swiper.min.css';
+@import '../../assets/header/carousel-slider.css';
 </style>

@@ -13,7 +13,7 @@
 import headerContent from "/layouts/header/header-content";
 import subMenu from "/layouts/header/sub-menu";
 import recentlyBody from "/layouts/body/recently-body";
-import footerContent from "/layouts/footer/FooterContent";
+import footerContent from "/layouts/footer/footer-content";
 
 export default {
   name: "recently",

@@ -13,7 +13,7 @@
 <script>
 
 import axios from "axios";
-import basket from '/layouts/basket/Basket.vue'
+import basket from '/layouts/basket/basket'
 import catalogBody from '/layouts/body/catalog'
 
 export default {

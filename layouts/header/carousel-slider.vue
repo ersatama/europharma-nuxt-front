@@ -26,7 +26,7 @@ export default {
   directives: {
     swiper: directive
   },
-  name: "carouselSlider",
+  name: "carousel-slider",
   data() {
     return {
       swiperOptions: {
@@ -75,6 +75,6 @@ export default {
 </script>
 
 <style>
-@import 'assets/swiper.min.css';
-@import 'assets/carousel.css';
+@import 'assets/header/swiper/swiper.min.css';
+@import 'assets/header/carousel-slider.css';
 </style>

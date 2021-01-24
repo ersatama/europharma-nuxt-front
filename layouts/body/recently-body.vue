@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import basket from '/layouts/basket/Basket.vue';
+import basket from '/layouts/basket/basket.vue';
 export default {
   name: "recently-body",
   components: {

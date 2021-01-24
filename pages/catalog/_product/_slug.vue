@@ -26,7 +26,7 @@ import breadCrumb from '/layouts/header/bread-crumb.vue'
 import loader from '/layouts/loader/loader'
 import notFound from '/layouts/not-found/not-found'
 import dynamicCatalogProductBody from "/layouts/body/dynamic-catalog-product-body";
-import footerContent from "@/layouts/footer/FooterContent";
+import footerContent from "@/layouts/footer/footer-content";
 export default {
   components: {
     headerContent,

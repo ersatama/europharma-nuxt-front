@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import basket from "~/layouts/basket/Basket";
+import basket from "@/layouts/basket/basket";
 export default {
   name: "history-body",
   components: {

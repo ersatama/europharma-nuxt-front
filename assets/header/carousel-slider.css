@@ -1,5 +1,5 @@
 .carousel {
-  margin: 0 0 0 0;
+  margin: 0 0 20px 0;
   position: relative;
 }
 
@@ -32,7 +32,7 @@
   z-index: 10;
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
   transform: translate(0,-40%);
-  background: url('img/next.svg') #fff no-repeat center;
+  background: url('../img/next.svg') #fff no-repeat center;
   cursor: pointer;
 }
 .slider-next {

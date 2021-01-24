@@ -19,7 +19,7 @@ import special from '/layouts/main/special/special.vue';
 import recently from '/layouts/main/recently/recently.vue';
 import history from '/layouts/main/history/history.vue';
 import brands from '/layouts/main/brands/brands.vue';
-import basket from '/layouts/basket/Basket.vue';
+import basket from '/layouts/basket/basket.vue';
 
 export default {
   name: "contentMain",

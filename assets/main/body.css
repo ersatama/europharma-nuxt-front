@@ -1,8 +1,10 @@
 .main-body {
-  margin: 0 64px 0 64px;
   display: grid;
   grid-template-columns: auto 360px;
   grid-gap: 32px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto 0 auto;
 }
 .main-body-left {
   overflow: hidden;

@@ -13,7 +13,7 @@
 import headerContent from '@/layouts/header/header-content.vue'
 import subMenu from "@/layouts/header/sub-menu"
 import popularBody from '~/layouts/body/popular-body';
-import footerContent from "~/layouts/footer/FooterContent"
+import footerContent from "@/layouts/footer/footer-content"
 
 export default {
   name: "popular.vue",

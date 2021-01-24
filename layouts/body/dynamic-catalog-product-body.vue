@@ -20,7 +20,7 @@
 import axios from "axios";
 import loader from '/layouts/loader/loader'
 import notFound from '/layouts/not-found/not-found'
-import basket from '/layouts/basket/Basket.vue'
+import basket from '/layouts/basket/basket.vue'
 
 export default {
 name: "dynamic-catalog-product-body",

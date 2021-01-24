@@ -13,7 +13,7 @@
 import { yandexMap, ymapMarker } from 'vue-yandex-maps'
 export default {
   components: { yandexMap, ymapMarker },
-  name: "Basket.vue",
+  name: "basket",
   data() {
     return {
       settings: {

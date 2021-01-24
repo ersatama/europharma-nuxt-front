@@ -11,12 +11,14 @@
 </template>
 
 <script>
+
+import axios from "axios";
 import headerContent from '/layouts/header/header-content.vue'
 import subMenu from '/layouts/header/sub-menu.vue'
 import breadCrumb from '/layouts/header/bread-crumb.vue'
-import footerContent from "@/layouts/footer/FooterContent";
+import footerContent from "@/layouts/footer/footer-content";
 import dynamicCatalogBody from '/layouts/body/dynamic-catalog-body'
-import axios from "axios";
+
 export default {
   components: {
     headerContent,

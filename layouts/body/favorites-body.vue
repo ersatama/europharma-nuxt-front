@@ -11,7 +11,9 @@
 </template>
 
 <script>
-import basket from '/layouts/basket/Basket.vue'
+
+import axios from 'axios'
+import basket from '/layouts/basket/basket.vue'
 import listBody from '/layouts/body/list'
 export default {
   name: "favorites-body",
@@ -21,80 +23,19 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: '../img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        }
-      ]
+      items: []
+    }
+  },
+  created() {
+    this.getFavouriteProducts();
+  },
+  methods: {
+    getFavouriteProducts() {
+      let self  = this;
+      axios.get('http://127.0.0.1:8000/web/products/popular?limit=4')
+        .then(function (response) {
+          self.items = response.data;
+        });
     }
   }
 }

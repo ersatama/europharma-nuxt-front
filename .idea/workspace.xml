@@ -2,27 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="444cd090-21bd-4840-8b4d-57c9b86d9e29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/header/bread-crumb.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/header/sub-menu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/loader.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/loader/loader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/body/dynamic-catalog-product-body.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/body/list-menu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/header/bread-crumb.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/loader/loader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/not-found/not-found.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/catalog/_product/_slug.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/body/catalog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/body/list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/body/special-body.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/list.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/menuList.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/menu/list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/ContentBody.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/ContentBody.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/MenuList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/MenuList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/header/carousel-slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/footer/body/body.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/footer/body/body.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/footer/footer-content.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/header/bread-crumb.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/header/bread-crumb.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/main/body.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/main/body.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/swiper.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/header/swiper/swiper.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/basket/Basket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/basket/basket.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/body/catalog-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/catalog-body.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/body/catalog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/catalog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/body/dynamic-catalog-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/dynamic-catalog-body.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/header/breadCrumb.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/header/headerContent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/header/header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/header/subMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/header/sub-menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/body/dynamic-catalog-product-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/dynamic-catalog-product-body.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/body/favorites-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/favorites-body.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/body/history-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/history-body.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/body/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/body/popular-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/popular-body.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/body/recently-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/recently-body.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/body/special-body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/body/special-body.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/footer/FooterContent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/footer/footer-content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/footer/body/FooterBodyContent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/footer/body/footer-body-content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/header/carouselSlider.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/header/carousel-slider.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/main/contentMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/main/contentMain.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/product/productMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/product/productMenu.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/catalog/_product/_slug.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/_product/_slug.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/catalog/_slug.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/_slug.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/catalog/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/catalog/popular.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/popular.vue" afterDir="false" />
@@ -100,11 +107,11 @@
       <recent name="C:\OpenServer\domains\europharma.kz\europharma.kz\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\assets\header\swiper" />
       <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\assets\header" />
       <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\assets\menu" />
       <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\assets\img" />
       <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\assets" />
-      <recent name="C:\open_server_5_3_7_full\OpenServer\domains\emart\pages\products" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -155,7 +162,7 @@
       <workItem from="1611212298300" duration="3243000" />
       <workItem from="1611216985299" duration="1222000" />
       <workItem from="1611224584194" duration="11444000" />
-      <workItem from="1611295580159" duration="21552000" />
+      <workItem from="1611295580159" duration="25697000" />
     </task>
     <servers />
   </component>

@@ -8,7 +8,7 @@
 
 <script>
 import FooterHeaderContent from '/layouts/footer/header/FooterHeaderContent.vue';
-import FooterBodyContent from '/layouts/footer/body/FooterBodyContent.vue';
+import FooterBodyContent from '/layouts/footer/body/footer-body-content.vue';
 import FooterFooterContent from '/layouts/footer/footer/FooterFooterContent.vue';
 export default {
   components: {
@@ -16,9 +16,9 @@ export default {
     FooterBodyContent,
     FooterFooterContent
   },
-  name: "FooterContent"
+  name: "footer-content"
 }
 </script>
 <style>
-  @import 'assets/footer/footer.css';
+  @import 'assets/footer/footer-content.css';
 </style>

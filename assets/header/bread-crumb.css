@@ -2,7 +2,9 @@
   font-size: 16px;
   line-height: 20px;
   color: #A2A2A2;
-  margin: 30px 0 30px 64px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 30px auto 30px auto;
 }
 .breadcrumb-title > a {
   color: #A2A2A2;

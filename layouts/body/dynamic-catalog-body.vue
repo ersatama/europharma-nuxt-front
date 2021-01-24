@@ -14,7 +14,7 @@
 <script>
 
 import axios from "axios";
-import basket from '/layouts/basket/Basket.vue'
+import basket from '/layouts/basket/basket.vue'
 import productMenu from '/layouts/product/productMenu'
 import listBody from '/layouts/body/list'
 import listMenu from '/layouts/body/list-menu'
