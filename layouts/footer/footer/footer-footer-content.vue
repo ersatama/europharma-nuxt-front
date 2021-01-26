@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-name: "FooterFooterContent"
+name: "footer-footer-content"
 }
 </script>
 <style>

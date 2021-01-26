@@ -22,7 +22,7 @@ import brands from '/layouts/main/brands/brands.vue';
 import basket from '/layouts/basket/basket.vue';
 
 export default {
-  name: "contentMain",
+  name: "content-main",
   components: {
     popular,
     special,
@@ -34,5 +34,5 @@ export default {
 }
 </script>
 <style>
-@import '../../assets/main/body.css';
+@import '../../assets/main/content-body.css';
 </style>

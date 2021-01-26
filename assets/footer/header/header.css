@@ -1,15 +1,17 @@
 .footer-header {
-  height: 138px;
-  background: #F9F9F9;
+  height: 130px;
+  background: #fff;
   margin: 80px 0 0 0;
   display: flex;
   border-bottom: 1px solid #EDECEE;
+  border-top: 1px solid #EDECEE;
 }
 .footer-header > div {
-  margin: 0 166px 0 166px;
   align-self: center;
-  width: 100%;
   overflow: hidden;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto 0 auto;
 }
 .footer-header-title {
   font-size: 40px;

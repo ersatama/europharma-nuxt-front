@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import FooterHeaderContent from '/layouts/footer/header/FooterHeaderContent.vue';
+import FooterHeaderContent from '/layouts/footer/header/footer-header-content.vue';
 import FooterBodyContent from '/layouts/footer/body/footer-body-content.vue';
-import FooterFooterContent from '/layouts/footer/footer/FooterFooterContent.vue';
+import FooterFooterContent from '/layouts/footer/footer/footer-footer-content.vue';
 export default {
   components: {
     FooterHeaderContent,

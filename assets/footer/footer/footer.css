@@ -5,10 +5,12 @@
   display: flex;
 }
 .footer-footer > div {
-  margin: 0 166px 0 166px;
   align-self: center;
-  width: 100%;
   overflow: hidden;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto 0 auto;
+  padding: 0 50px 0 50px;
 }
 .footer-footer-title {
   float: left;

@@ -6,7 +6,7 @@
         <loader></loader>
       </template>
       <template v-else>
-        <div>hello world</div>
+        <catalogMenu></catalogMenu>
       </template>
     </div>
     <div class="main-body-right">
@@ -21,14 +21,15 @@ import axios from "axios";
 import loader from '/layouts/loader/loader'
 import notFound from '/layouts/not-found/not-found'
 import basket from '/layouts/basket/basket.vue'
-
+import catalogMenu from '/layouts/product/catalog-menu'
 export default {
-name: "dynamic-catalog-product-body",
+  name: "dynamic-catalog-product-body",
   props: ['title'],
   components: {
     loader,
     notFound,
-    basket
+    basket,
+    catalogMenu
   },
   data() {
     return {
@@ -47,6 +48,8 @@ name: "dynamic-catalog-product-body",
       axios.get('http://127.0.0.1:8000/web/products/slug/'+slug+'/'+product)
         .then(function (response) {
           let data    = response.data;
+          self.status = 1;
+          return console.log(data);
           self.items = response.data;
         });
     }

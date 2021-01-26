@@ -12,7 +12,7 @@
 
 <script>
 export default {
-name: "FooterHeaderContent"
+name: "footer-header-content"
 }
 </script>
 

@@ -14,7 +14,7 @@
 import headerContent from '/layouts/header/header-content.vue'
 import subMenu from '/layouts/header/sub-menu.vue'
 import carouselSlider from '/layouts/header/carousel-slider.vue'
-import contentBody from '/layouts/main/contentMain.vue'
+import contentBody from '/layouts/main/content-main.vue'
 import footerContent from '/layouts/footer/footer-content.vue'
 
 export default {

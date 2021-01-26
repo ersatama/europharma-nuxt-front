@@ -3,7 +3,7 @@
     <div class="main-body-left">
       <div class="main-body-title"><span>{{title}}</span></div>
       <productMenu :url="url"></productMenu>
-      <listMenu :list="items"></listMenu>
+      <listMenu :list="items" :status="status"></listMenu>
     </div>
     <div class="main-body-right">
       <basket></basket>
@@ -19,7 +19,7 @@ import productMenu from '/layouts/product/productMenu'
 import listBody from '/layouts/body/list'
 import listMenu from '/layouts/body/list-menu'
 export default {
-  props: ['title'],
+  props: ['title','items','status'],
   components: {
     basket,
     productMenu,
@@ -29,7 +29,6 @@ export default {
   data() {
     return {
       url:  '/'+this.$route.path.split('/')[2],
-      items: []
     }
   },
   created() {
@@ -37,12 +36,12 @@ export default {
   },
   methods: {
     getProductsBySlug() {
-      let slug  = this.$route.path.split('/')[2];
+      /*let slug  = this.$route.path.split('/')[2];
       let self  = this;
-      axios.get('http://127.0.0.1:8000/web/products/slug/'+slug)
+      axios.get('http://127.0.0.1:8000/web/menu/slug/'+slug)
         .then(function (response) {
           self.items = response.data;
-        });
+        });*/
     }
   }
 }

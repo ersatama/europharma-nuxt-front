@@ -2,22 +2,16 @@
   <div class="product-menu">
       <div class="product-menu-list">
         <div class="product-slide" :class="[(url === slide.url)?'product-slide-sel':'']">
-          <div class="product-slide-img" :style="{'background-image':'url('+slide.logo+')'}"></div>
-          <div class="product-slide-content">
-            <div>{{slide.title}}</div>
-          </div>
+          <div class="product-slide-img" :style="{'background-image':'url('+slide.img+')'}"></div>
+          <div class="product-slide-content">{{slide.title}}</div>
         </div>
         <NuxtLink :to="prefix+slide.url" v-for="(slide,index) in slider" :key="index">
           <div class="product-slide" :class="[(url === slide.url)?'product-slide-sel':'']">
-            <div class="product-slide-img" :style="{'background-image':'url('+slide.logo+')'}"></div>
-            <div class="product-slide-content">
-              <div>{{slide.title}}</div>
-            </div>
+            <div class="product-slide-img" :style="{'background-image':'url('+slide.img+')'}"></div>
+            <div class="product-slide-content">{{slide.title}}</div>
           </div>
         </NuxtLink>
       </div>
-    <div class="product-slide-next"></div>
-    <div class="product-slide-prev"></div>
   </div>
 </template>
 
@@ -31,7 +25,7 @@ export default {
       prefix: '/catalog',
       slide: {
         url: '/',
-        logo: '../img/emart-logo.png',
+        img: '../img/emart-logo.png',
         title: 'Все товары',
       },
       slider: []
@@ -57,6 +51,4 @@ export default {
 
 <style>
 @import 'assets/product/productMenu.css';
-@import '../../assets/header/swiper/swiper.min.css';
-@import '../../assets/header/carousel-slider.css';
 </style>
