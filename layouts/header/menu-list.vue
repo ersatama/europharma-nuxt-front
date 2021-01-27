@@ -16,8 +16,11 @@
               <div class="menu-list-right-item-title">{{item.title}}</div>
             </NuxtLink>
             <div class="menu-list-right-item-all">
-              <NuxtLink :to="prefix+items[sel].url+item.url+submenu.url" v-for="(submenu,id) in item.list" :key="id">
+              <NuxtLink :to="prefix+items[sel].url+item.url+submenu.url" v-for="(submenu,id) in item.list" :key="id" v-show="id < 6">
                 <div class="menu-list-right-item-self">{{submenu.title}}</div>
+              </NuxtLink>
+              <NuxtLink :to="prefix+items[sel].url+item.url" v-show="(item.list.length-6) > 1">
+                <div class="menu-list-right-item-self text-dark font-weight-bold">ещё {{item.list.length - 6}} категории</div>
               </NuxtLink>
             </div>
           </div>
@@ -29,6 +32,7 @@
 <script>
 import axios from "axios";
 export default {
+  name: 'menu-list',
   props: ['menu'],
   data() {
     return {
@@ -52,6 +56,6 @@ export default {
 }
 </script>
 <style>
-@import 'assets/menu/list.css';
+@import '../../assets/menu/list.css';
 </style>
 

@@ -6,7 +6,7 @@
         <loader></loader>
       </template>
       <template v-else>
-        <catalogMenu></catalogMenu>
+        <catalogMenu :filter="filter"></catalogMenu>
       </template>
     </div>
     <div class="main-body-right">
@@ -34,6 +34,7 @@ export default {
   data() {
     return {
       status: 0,
+      filter: {},
       items: []
     }
   },
@@ -43,14 +44,13 @@ export default {
   methods: {
     getProductsBySlugAndProduct() {
       let self    = this;
-      let slug    = this.$route.path.split('/')[2];
       let product = this.$route.path.split('/')[3];
-      axios.get('http://127.0.0.1:8000/web/products/slug/'+slug+'/'+product)
+      axios.get('http://127.0.0.1:8000/web/products/category/'+product)
         .then(function (response) {
           let data    = response.data;
           self.status = 1;
-          return console.log(data);
-          self.items = response.data;
+          self.filter = data.filter;
+          self.items  = data.items;
         });
     }
   }

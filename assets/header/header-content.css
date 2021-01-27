@@ -79,7 +79,7 @@ body {
 }
 .login-button {
   width: 99px;
-  background: #DDDDDD !important;
+  background: #EFEFEF !important;
   border: none !important;
 }
 .login-button, .login-button-address {
@@ -121,7 +121,7 @@ body {
   margin: 0;
   font-size: 14px;
   line-height: 25px;
-  background: #DDDDDD;
+  background: #EFEFEF;
   padding: 0 20px 0 20px;
   height: 40px;
   border: 0 solid #37424D;

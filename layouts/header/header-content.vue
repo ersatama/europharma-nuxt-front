@@ -39,7 +39,7 @@
 
 <script>
 import modalMap from '/layouts/modal/map/map.vue'
-import MenuList from '/layouts/MenuList.vue'
+import MenuList from '/layouts/header/menu-list.vue'
 export default {
   components: {
     modalMap,

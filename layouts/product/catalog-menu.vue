@@ -1,11 +1,11 @@
 <template>
   <div class="catalog-all">
-    <div class="catalog-menu">
+    <div class="catalog-menu" v-if="filter.price">
       <div class="catalog-menu-item">
-        <label class="catalog-menu-item-title">Цена</label>
+        <label class="catalog-menu-item-title">{{ filter.price.title }}</label>
         <div class="catalog-menu-price-input">
-          <button class="text-secondary">от <span class="text-dark font-weight-bold">25 000 ₸ </span></button>
-          <button class="text-secondary">до <span class="text-dark font-weight-bold">75 000 ₸ </span></button>
+          <button class="text-secondary">от <span class="text-dark font-weight-bold">{{filter.price.min}} ₸ </span></button>
+          <button class="text-secondary">до <span class="text-dark font-weight-bold">{{filter.price.max}} ₸ </span></button>
         </div>
         <div class="catalog-menu-price-range">
           <div class="catalog-menu-price-range-line">
@@ -16,132 +16,24 @@
           </div>
         </div>
       </div>
-      <div class="catalog-menu-item">
-        <label class="catalog-menu-item-title">Производитель</label>
-        <div class="catalog-menu-options">
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">Apple</div>
-          </div>
-          <div class="catalog-menu-option catalog-menu-option-checked">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">Honor</div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">Huawei</div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">Meizu</div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">Oppo</div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">Xiaomi</div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">Samsung</div>
-          </div>
+      <div class="catalog-menu-item" v-for="(item,index) in filter.options" :key="index" onselectstart="return false">
+        <div class="catalog-menu-button" :class="[!item.status?'catalog-menu-button-hide':'']" @click="hideOptions(index)"></div>
+        <label class="catalog-menu-item-title" @click="hideOptions(index)">{{item.title}}</label>
+        <div class="catalog-menu-options" :class="[!item.status?'catalog-menu-options-hide':'']">
+          <button class="catalog-menu-option" v-for="(option,id) in item.list" :key="id">
+            <div class="catalog-menu-option-title">{{ option.title }}</div>
+          </button>
         </div>
       </div>
-      <div class="catalog-menu-item">
-        <label class="catalog-menu-item-title">Платформа</label>
-        <div class="catalog-menu-options">
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">Android</div>
-          </div>
-          <div class="catalog-menu-option catalog-menu-option-checked">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">iOS</div>
-          </div>
-        </div>
-      </div>
-      <div class="catalog-menu-item">
-        <label class="catalog-menu-item-title">Диагональ экрана</label>
-        <div class="catalog-menu-options">
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">До 4</div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">4.1 - 5</div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">5 - 6</div>
-          </div>
-        </div>
-      </div>
-      <div class="catalog-menu-item">
-        <label class="catalog-menu-item-title">Рейтинг товара</label>
-        <div class="catalog-menu-options">
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">
-              <div class="catalog-menu-option-rating">
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star-disabled"></div>
-              </div>
+      <div class="catalog-menu-item" v-if="filter.rating && filter.rating.list.length > 0">
+        <div class="catalog-menu-button" :class="[filter.rating.status?'catalog-menu-button-hide':'']" @click="hideRating()"></div>
+        <label class="catalog-menu-item-title" @click="hideRating()">{{filter.rating.title}}</label>
+        <div class="catalog-menu-options" :class="[filter.rating.status?'catalog-menu-options-hide':'']">
+          <button class="catalog-menu-option" v-for="(star,id) in filter.rating.list" :key="id">
+            <div class="catalog-menu-option-rating">
+              <div class="catalog-menu-option-rating-star" v-for="(n,index) in star" :key="index"></div>
             </div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">
-              <div class="catalog-menu-option-rating">
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star-disabled"></div>
-              </div>
-            </div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">
-              <div class="catalog-menu-option-rating">
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star-disabled"></div>
-              </div>
-            </div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">
-              <div class="catalog-menu-option-rating">
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star-disabled"></div>
-              </div>
-            </div>
-          </div>
-          <div class="catalog-menu-option">
-            <div class="catalog-menu-option-checkbox"></div>
-            <div class="catalog-menu-option-checkbox-title">
-              <div class="catalog-menu-option-rating">
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star"></div>
-                <div class="catalog-menu-option-rating-star-disabled"></div>
-              </div>
-            </div>
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -151,7 +43,16 @@
 
 <script>
 export default {
-name: "catalog-menu"
+  props: ['filter'],
+  name: "catalog-menu",
+  methods: {
+    hideOptions(index) {
+      this.$set(this.filter.options[index], 'status', !this.filter.options[index].status);
+    },
+    hideRating() {
+      this.$set(this.filter.rating, 'status', !this.filter.rating.status);
+    }
+  }
 }
 </script>
 
