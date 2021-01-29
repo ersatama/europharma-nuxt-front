@@ -8,7 +8,7 @@
     <template v-else-if="status === 1">
       <breadCrumb :path="path"></breadCrumb>
       <div class="container-fluid m-0 p-0">
-        <dynamicCatalogProductBody :title="title" :fitler="filter" :items="items" :status="status"></dynamicCatalogProductBody>
+        <dynamicItemBody :title="title" :items="items" :status="status" :filter="filter"></dynamicItemBody>
       </div>
     </template>
     <template v-else>
@@ -19,14 +19,14 @@
 </template>
 
 <script>
-import axios from "axios";
 import headerContent from '/layouts/header/header-content.vue'
 import subMenu from '/layouts/header/sub-menu.vue'
 import breadCrumb from '/layouts/header/bread-crumb.vue'
 import loader from '/layouts/loader/loader'
 import notFound from '/layouts/not-found/not-found'
-import dynamicCatalogProductBody from "/layouts/body/dynamic-catalog-product-body";
+import dynamicItemBody from '/layouts/body/dynamic-item-body'
 import footerContent from "@/layouts/footer/footer-content";
+import axios from "axios";
 export default {
   components: {
     headerContent,
@@ -34,35 +34,35 @@ export default {
     breadCrumb,
     loader,
     notFound,
-    dynamicCatalogProductBody,
-    footerContent,
-  },
-  created() {
-    this.getCatalogBySlugAndProduct();
+    dynamicItemBody,
+    footerContent
   },
   data() {
     return {
       status: 0,
       path:   [['Главная',''],['Каталог','/catalog']],
       title:  '',
-      filter: {},
-      items: []
+      items:  [],
+      filter: {}
     }
   },
+  created() {
+    this.getItemBySlugAndProductAndItem();
+  },
   methods: {
-    getCatalogBySlugAndProduct() {
+    getItemBySlugAndProductAndItem() {
       let self  = this;
       let path  = this.$route.path.split('/');
-      axios.get('http://127.0.0.1:8000/web/menu/slug/'+path[2]+'/'+path[3])
+      axios.get('http://127.0.0.1:8000/web/menu/slug/'+path[2]+'/'+path[3]+'/'+path[4])
         .then(function (response) {
           let data    = response.data;
-          if (data.path.length > 1) {
+          if (data.path.length > 2) {
             self.status = 1;
             data.path.forEach(function (value,key,arr) {
               self.path.push(arr[key]);
             });
-            self.title  = data.path[1][0];
-            self.items  = data.list;
+            self.title  = data.path[2][0];
+            self.filter = data.menu.filter;
           } else {
             self.status = 2;
           }

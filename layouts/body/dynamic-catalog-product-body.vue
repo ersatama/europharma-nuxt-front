@@ -2,12 +2,8 @@
   <div class="main-body">
     <div class="main-body-left">
       <div class="main-body-title"><span>{{title}}</span></div>
-      <template v-if="status === 0">
-        <loader></loader>
-      </template>
-      <template v-else>
-        <catalogMenu :filter="filter"></catalogMenu>
-      </template>
+      <productMenu :url="url"></productMenu>
+      <listMenuProduct :list="items" :status="status"></listMenuProduct>
     </div>
     <div class="main-body-right">
       <basket></basket>
@@ -17,33 +13,36 @@
 
 <script>
 
-import axios from "axios";
+import productMenu from '/layouts/product/productMenu'
 import loader from '/layouts/loader/loader'
 import notFound from '/layouts/not-found/not-found'
 import basket from '/layouts/basket/basket.vue'
+import listMenuProduct from '/layouts/body/list-menu-product'
+/*
 import catalogMenu from '/layouts/product/catalog-menu'
+import productsBody from '/layouts/product/products-body'
+
+<catalogMenu :filter="filter"></catalogMenu>
+          <productsBody :items="items"></productsBody>
+ */
 export default {
   name: "dynamic-catalog-product-body",
-  props: ['title'],
+  props: ['title','items','status'],
   components: {
     loader,
     notFound,
     basket,
-    catalogMenu
+    productMenu,
+    listMenuProduct
   },
   data() {
     return {
-      status: 0,
-      filter: {},
-      items: []
+      url:  '/'+this.$route.path.split('/')[2],
     }
-  },
-  created() {
-    this.getProductsBySlugAndProduct();
   },
   methods: {
     getProductsBySlugAndProduct() {
-      let self    = this;
+      /*let self    = this;
       let product = this.$route.path.split('/')[3];
       axios.get('http://127.0.0.1:8000/web/products/category/'+product)
         .then(function (response) {
@@ -51,12 +50,12 @@ export default {
           self.status = 1;
           self.filter = data.filter;
           self.items  = data.items;
-        });
+        });*/
     }
   }
 }
 </script>
 
-<style scoped>
-
+<style>
+@import 'assets/product/catalog-menu.css';
 </style>

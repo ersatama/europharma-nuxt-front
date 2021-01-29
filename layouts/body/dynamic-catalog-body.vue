@@ -13,10 +13,8 @@
 
 <script>
 
-import axios from "axios";
 import basket from '/layouts/basket/basket.vue'
 import productMenu from '/layouts/product/productMenu'
-import listBody from '/layouts/body/list'
 import listMenu from '/layouts/body/list-menu'
 export default {
   props: ['title','items','status'],
@@ -31,19 +29,6 @@ export default {
       url:  '/'+this.$route.path.split('/')[2],
     }
   },
-  created() {
-    this.getProductsBySlug();
-  },
-  methods: {
-    getProductsBySlug() {
-      /*let slug  = this.$route.path.split('/')[2];
-      let self  = this;
-      axios.get('http://127.0.0.1:8000/web/menu/slug/'+slug)
-        .then(function (response) {
-          self.items = response.data;
-        });*/
-    }
-  }
 }
 
 </script>

@@ -25,7 +25,7 @@ export default {
       prefix: '/catalog',
       slide: {
         url: '/',
-        img: '../img/emart-logo.png',
+        img: '/img/emart-logo.png',
         title: 'Все товары',
       },
       slider: []
