@@ -15,10 +15,10 @@
         </div>
       </div>
     </div>
-    <div class="catalog-menu-item" v-for="(item,index) in filter.options" :key="index" onselectstart="return false">
-      <div class="catalog-menu-button" :class="[!item.status?'catalog-menu-button-hide':'']" @click="hideOptions(index)"></div>
+    <div class="catalog-menu-item" v-for="(item,index) in filter.options" :key="index" onselectstart="return false" v-if="item.list.length > 0">
+      <div class="catalog-menu-button" :class="[item.status?'catalog-menu-button-hide':'']" @click="hideOptions(index)"></div>
       <label class="catalog-menu-item-title" @click="hideOptions(index)">{{item.title}}</label>
-      <div class="catalog-menu-options" :class="[!item.status?'catalog-menu-options-hide':'']">
+      <div class="catalog-menu-options" :class="[item.status?'catalog-menu-options-hide':'']">
         <button class="catalog-menu-option" v-for="(option,id) in item.list" :key="id">
           <div class="catalog-menu-option-title">{{ option.title }}</div>
         </button>

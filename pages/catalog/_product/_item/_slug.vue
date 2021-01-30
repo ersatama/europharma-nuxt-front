@@ -63,6 +63,7 @@ export default {
             });
             self.title  = data.path[2][0];
             self.filter = data.menu.filter;
+            self.items  = data.list;
           } else {
             self.status = 2;
           }
