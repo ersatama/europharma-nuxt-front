@@ -1,0 +1,43 @@
+.cabinet {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-gap: 30px;
+}
+.cabinet-menu {
+
+}
+.cabinet-photo {
+  background: #37424D;
+  color: #fff;
+  width: 175px;
+  height: 175px;
+  border-radius: 100px;
+  position: relative;
+  margin: 0 auto 0 auto;
+}
+.cabinet-photo-name {
+  font-size: 70px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.cabinet-name {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+.cabinet-menu-list {
+  margin-top: 30px;
+  display: grid;
+  grid-gap: 5px;
+}
+.cabinet-menu-item {
+  color: #989898;
+  cursor: pointer;
+}
+.cabinet-menu-item-sel {
+  font-weight: 500;
+  color: black;
+}

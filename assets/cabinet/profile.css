@@ -1,0 +1,243 @@
+.profile-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+}
+.profile-subtitle {
+  font-size: 18px;
+  color: #333333;
+  margin: 20px 0 0 0;
+  font-weight: 500;
+}
+.profile-description {
+  font-size: 14px;
+  color: #989898;
+  margin: 10px 0 0 0;
+}
+.profile-form {
+  margin: 30px 0 0 0;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.profile-form-input {
+  width: min-content;
+}
+.profile-form-label {
+  font-size: 14px;
+  color: #333333;
+  margin: 0 0 10px 10px;
+  font-weight: 500;
+}
+.profile-form-text {
+  border-radius: 30px;
+  background: #fff;
+  color: #37424D;
+  border: none;
+  padding: 0 20px 0 20px;
+  height: 40px;
+  min-width: 250px;
+}
+.profile-edit {
+  font-size: 14px;
+  color: #6FC52B;
+  font-weight: 500;
+  margin: 20px 0 0 10px;
+  cursor: pointer;
+}
+.profile-addresses {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0 0 0;
+  gap: 30px;
+}
+.profile-address {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 300px;
+}
+.profile-address-title {
+  color: #333333;
+  font-weight: 500;
+  font-size: 16px;
+}
+.profile-address-desc {
+  color: #989898;
+  font-size: 12px;
+}
+.profile-address-options {
+  overflow: hidden;
+  margin: 10px 0 10px 0;
+  font-size: 13px;
+}
+.profile-address-options > div:first-child {
+  float: left;
+  color: #6FC52B;
+}
+.profile-address-options > div:last-child {
+  float: right;
+  color: #FF5065;
+}
+.profile-address-button {
+  background: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0 5px 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #37424D;
+  border: 2px solid #37424D;
+  box-sizing: border-box;
+}
+.profile-address-button-sel {
+  background: #37424D;
+  color: #fff;
+}
+.profile-table {
+  margin: 30px 30px 0 0;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+.profile-table-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+  gap: 5px;
+  font-size: 13px;
+  background: #37424D;
+  color: #fff;
+}
+.profile-table-header-item {
+  padding: 10px;
+}
+.profile-table-list {
+  min-height: 150px;
+}
+.profile-table-list-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.profile-table-list-item:nth-child(even) {
+  background: #EFEFEF;
+}
+.profile-table-list-item-field {
+  padding: 10px;
+}
+.profile-table-list-item-field:nth-child(3) {
+  color: #989898;
+  font-weight: normal;
+}
+.profile-table-list-item-field-delivery {
+  color: #006FD6;
+}
+.profile-table-list-item-field-delivered {
+  color: #6FC52B;
+}
+.profile-table-list-item-field-canceled {
+  color: #FF5065;
+}
+.profile-review {
+  margin: 30px 30px 0 0;
+  background: #fff;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-gap: 20px;
+  padding: 20px;
+}
+.profile-review-icon {
+  width: 100px;
+  height: 100px;
+  background: no-repeat center;
+  background-size: contain;
+}
+.profile-review-content {
+  overflow: hidden;
+}
+.profile-review-content-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+}
+.profile-review-content-subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  margin-top: 10px;
+}
+.profile-review-content-description {
+  color: #989898;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.profile-review-content-help {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+.profile-review-content-help-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+.profile-review-content-help-btn {
+  padding: 5px 10px 5px 10px;
+  border: 2px solid #EDECEE;
+  color: #C4C4C4;
+  border-radius: 30px;
+  font-size: 14px;
+}
+.profile-review-content-stars {
+  float: right;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.profile-review-content-star-title {
+  overflow: hidden;
+  font-weight: normal;
+  color: #989898;
+}
+.profile-review-content-star-list {
+  display: flex;
+  gap: 3px;
+}
+.profile-review-content-star {
+  width: 14px;
+  height: 14px;
+  background: url('../img/star.svg') no-repeat center;
+  background-size: contain;
+}
+.profile-payment {
+  overflow: hidden;
+  min-width: 260px;
+}
+.profile-payment > div:first-child {
+  width: 50px;
+  height: 20px;
+  background: no-repeat center;
+  background-size: contain;
+  float: left;
+}
+.profile-payment > div:last-child {
+  float: right;
+  color: #FF5065;
+  font-size: 16px;
+}
+.profile-payment-digit {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin: 30px 0 5px 0;
+}
+.profile-payment-digit > div {
+  text-align: center;
+  font-size: 20px;
+  color: #333333;
+  font-weight: 500;
+}

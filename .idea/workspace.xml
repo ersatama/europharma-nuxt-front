@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="444cd090-21bd-4840-8b4d-57c9b86d9e29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/cabinet/address/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/cabinet/eclub/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/cabinet/history/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/cabinet/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/cabinet/payment/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/cabinet/reviews/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/cabinet/security/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/login/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/register/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/layouts/header/header-content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/header/header-content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/product/product-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/product/product-item.vue" afterDir="false" />
+>>>>>>> c8715c5078482718af537bb1657bb486d10d2003
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +144,12 @@
       <workItem from="1611295580159" duration="41197000" />
       <workItem from="1611575263153" duration="1939000" />
       <workItem from="1611643435915" duration="28639000" />
+<<<<<<< HEAD
       <workItem from="1611910688442" duration="20729000" />
+=======
+      <workItem from="1611910688442" duration="20321000" />
+      <workItem from="1612034579709" duration="840000" />
+>>>>>>> c8715c5078482718af537bb1657bb486d10d2003
     </task>
     <servers />
   </component>
