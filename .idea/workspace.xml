@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="444cd090-21bd-4840-8b4d-57c9b86d9e29" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/product/catalog-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/product/catalog-menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/product/products-body.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/product/products-body.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/product/products-item.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/product/products-item.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/product/catalog-menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/product/catalog-menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/product/product-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/product/product-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/catalog/_product/_item/_slug.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/_product/_item/_slug.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +130,7 @@
       <workItem from="1611295580159" duration="41197000" />
       <workItem from="1611575263153" duration="1939000" />
       <workItem from="1611643435915" duration="28639000" />
-      <workItem from="1611910688442" duration="20321000" />
+      <workItem from="1611910688442" duration="20729000" />
     </task>
     <servers />
   </component>
