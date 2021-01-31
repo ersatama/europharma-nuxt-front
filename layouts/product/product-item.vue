@@ -3,7 +3,9 @@
     <div class="products-body-discount" v-if="item.discount">-75%</div>
     <div class="products-body-eclub" v-if="item.eclub">eClub -15%</div>
     <div class="products-body-img" :style="{'background-image':'url('+item.img[0].img+')'}"></div>
-    <div class="products-body-title">{{item.title}}</div>
+    <NuxtLink :to="url+item.url">
+      <div class="products-body-title">{{item.title}}</div>
+    </NuxtLink>
     <div class="products-body-rating">
       <div class="products-body-stars">
         <div class="products-body-star"></div>
@@ -28,7 +30,12 @@
 <script>
 export default {
   props: ['item'],
-  name: "product-item"
+  name: "product-item",
+  data() {
+    return {
+      url: this.$route.path
+    }
+  }
 }
 /*
 

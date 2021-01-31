@@ -30,7 +30,9 @@
           <div class="login-address-icon"></div>
           <div>Алматы, пр Аль-Фараби 77/8</div>
         </button>
-        <button class="login-button">Войти</button>
+        <NuxtLink to="/login">
+          <button class="login-button">Войти</button>
+        </NuxtLink>
       </div>
     </div>
     <modalMap></modalMap>
