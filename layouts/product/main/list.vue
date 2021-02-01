@@ -1,11 +1,11 @@
 <template>
   <div class="row main-body-items">
-    <item v-for="(item,index) in list" :key="index" :product="item"></item>
+    <item v-for="(item,index) in list" :key="index" :item="item"></item>
   </div>
 </template>
 
 <script>
-import item from '/layouts/product/item.vue'
+import item from '/layouts/product/product-item.vue'
 export default {
   components: {
     item

@@ -18,7 +18,7 @@
 <script>
 import axios from "axios";
 export default {
-  props: ['url'],
+  props: ['url','path'],
   name: "productMenu",
   data() {
     return {

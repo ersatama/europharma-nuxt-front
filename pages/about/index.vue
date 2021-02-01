@@ -3,6 +3,9 @@
     <headerContent></headerContent>
     <subMenu></subMenu>
     <breadCrumb :path="path"></breadCrumb>
+    <div class="container-fluid m-0 p-0">
+
+    </div>
     <footerContent></footerContent>
   </div>
 </template>
@@ -20,10 +23,10 @@ export default {
     breadCrumb,
     footerContent
   },
-  name: "about",
+  name: "index",
   data() {
     return {
-      path: ['Главная','О нас']
+      path: [['Главная',''],['О нас','/about']]
     }
   },
 }

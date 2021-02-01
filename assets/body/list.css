@@ -4,6 +4,7 @@
 .list-filter {
   position: relative;
   height: 24px;
+  margin-bottom: 30px;
 }
 .list-filter-type {
   float: left;

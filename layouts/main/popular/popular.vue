@@ -1,16 +1,18 @@
 <template>
   <div>
-    <div class="main-body-title">
+    <div class="main-body-title main-body-title-main">
       <span>Популярные товары</span>
-      <NuxtLink to="/catalog/popular">
-        <div class="main-body-title-all">Посмотреть все</div>
-      </NuxtLink>
     </div>
     <product-list :list="items"></product-list>
+    <NuxtLink to="/catalog/popular">
+      <div class="main-body-title-bottom">Посмотреть все</div>
+    </NuxtLink>
   </div>
 </template>
 <script>
+import axios from 'axios'
 import productList from '/layouts/product/main/list'
+
 export default {
   name: "popular",
   components: {
@@ -18,44 +20,18 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
-          id: 1,
-          img: 'img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: 'img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: 'img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        },
-        {
-          id: 1,
-          img: 'img/img.jpg',
-          title: 'Подгузники Huggies Elite L (5)',
-          stars: ['1','1','1','1','0.5'],
-          feedback: 12,
-          price: '1 780',
-          limit: 10,
-        }
-      ]
+      items: []
+    }
+  },
+  created() {
+    this.getPopularProducts();
+  },
+  methods: {
+    getPopularProducts() {
+      let self  = this;
+      axios.get('http://127.0.0.1:8000/web/products/popular').then(function(response) {
+        self.items  = response.data;
+      });
     }
   }
 }

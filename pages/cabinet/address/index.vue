@@ -23,7 +23,7 @@ import headerContent from '/layouts/header/header-content.vue'
 import subMenu from '/layouts/header/sub-menu.vue'
 import breadCrumb from '/layouts/header/bread-crumb.vue'
 import cabinetMenu from '/layouts/cabinet/menu/cabinet-menu'
-import cabinetAddress from '/layouts/cabinet/address'
+import cabinetAddress from '/layouts/cabinet/address-cabinet'
 import basket from '/layouts/basket/basket.vue'
 import footerContent from '/layouts/footer/footer-content.vue'
 export default {

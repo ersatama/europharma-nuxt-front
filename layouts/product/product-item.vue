@@ -29,12 +29,18 @@
 
 <script>
 export default {
-  props: ['item'],
+  props: ['item','path'],
   name: "product-item",
   data() {
     return {
-      url: this.$route.path
+      url: ''
     }
+  },
+  created() {
+    let self  = this;
+    this.path.forEach(function(value, index, arr) {
+      self.url += value[1];
+    })
   }
 }
 /*

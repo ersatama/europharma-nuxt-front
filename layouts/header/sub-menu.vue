@@ -1,44 +1,27 @@
 <template>
   <div class="sub-menu">
-    <div class="sub-menu-item" v-for="(menu,index) in submenu" :key="index">
-      {{menu.title}}
-    </div>
+    <NuxtLink :to="prefix+menu[1]" v-for="(menu,index) in submenu" :key="index">
+      <div class="sub-menu-item">{{menu[0]}}</div>
+    </NuxtLink>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: "sub-menu",
   data() {
     return {
+      prefix: '/catalog',
       submenu: [
-        {
-          title: 'Новинки',
-        },
-        {
-          title: 'Электроника',
-        },
-        {
-          title: 'Здоровье',
-        },
-        {
-          title: 'Бытовая химия',
-        },
-        {
-          title: 'Спорт и отдых',
-        },
-        {
-          title: 'Продукты питания',
-        },
-        {
-          title: 'Строительство и ремонт',
-        },
-        {
-          title: 'Детям',
-        },
-        {
-          title: 'Мамам',
-        },
+        ['Новинки','/new_items'],
+        ['Электроника','/electronics'],
+        ['Здоровье','/health'],
+        ['Бытовая химия','/household_chemicals'],
+        ['Спорт и хобби','/gym'],
+        ['Продукты','/products'],
+        ['Строительство и ремонт','/construction_and_repair'],
+        ['Мать и дитя','/for_children'],
       ]
     }
   }

@@ -4,32 +4,33 @@
     <subMenu></subMenu>
     <breadCrumb :path="path"></breadCrumb>
     <div class="container-fluid m-0 p-0">
-      <loginBody></loginBody>
+      <historyBody></historyBody>
     </div>
     <footerContent></footerContent>
   </div>
 </template>
 
 <script>
-import headerContent from '/layouts/header/header-content.vue'
-import subMenu from '/layouts/header/sub-menu.vue'
+import headerContent from "/layouts/header/header-content"
+import subMenu from "/layouts/header/sub-menu"
 import breadCrumb from '/layouts/header/bread-crumb.vue'
-import loginBody from '/layouts/login/login'
-import footerContent from '/layouts/footer/footer-content.vue'
+import historyBody from "/layouts/body/history-body"
+import footerContent from "/layouts/footer/footer-content"
+
 export default {
+  name: "index",
   components: {
     headerContent,
     subMenu,
     breadCrumb,
-    loginBody,
+    historyBody,
     footerContent,
   },
-  name: "index",
   data() {
     return {
-      path:   [['Главная',''],['Логин','/login']],
+      path:   [['Главная',''],['Истории','/history']],
     }
-  }
+  },
 }
 </script>
 

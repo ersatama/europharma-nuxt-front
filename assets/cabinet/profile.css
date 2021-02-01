@@ -150,6 +150,21 @@
   grid-gap: 20px;
   padding: 20px;
 }
+.profile-review-name {
+  background: #37424D;
+  color: #fff;
+  position: relative;
+  height: 100px;
+  border-radius: 50px;
+}
+.profile-review-name > div {
+  font-size: 24px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 .profile-review-icon {
   width: 100px;
   height: 100px;

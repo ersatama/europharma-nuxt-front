@@ -1,15 +1,17 @@
 <template>
-  <div class="main-body">
-    <div class="main-body-left">
-      <popular></popular>
-      <special></special>
-      <recently></recently>
-      <history></history>
-      <brands></brands>
+  <div>
+    <div class="main-body">
+      <div class="main-body-left">
+        <popular></popular>
+        <special></special>
+        <recently></recently>
+      </div>
+      <div class="main-body-right">
+        <basket></basket>
+      </div>
     </div>
-    <div class="main-body-right">
-      <basket></basket>
-    </div>
+    <brands></brands>
+    <history></history>
   </div>
 </template>
 <script>

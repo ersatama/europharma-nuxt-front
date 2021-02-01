@@ -1,24 +1,19 @@
 <template>
-  <div>
-    <div class="main-body-title main-body-title-next">
+  <div class="history">
+    <div class="main-body-title main-body-title-next main-body-title-main main-body-title-center">
       <span>Истории</span>
-      <NuxtLink :to="prefix">
-        <div class="main-body-title-all">Перейти к историям</div>
-      </NuxtLink>
     </div>
     <div class="history-main">
-
-      <swiper ref="swiper" :options="historyOptions">
-        <NuxtLink :to="prefix+slide.url" :key="index" v-for="(slide,index) in slider">
-          <div class="swiper-slide history-slide">
-            <div class="history-slide-title">{{slide.title}}</div>
-            <img :src="slide.img" width="184" height="244" alt="">
-          </div>
-        </NuxtLink>
-      </swiper>
-      <div class="history-prev"></div>
-      <div class="history-next"></div>
+      <NuxtLink :to="prefix+slide.url" :key="index" v-for="(slide,index) in slider">
+        <div class="swiper-slide history-slide">
+          <div class="history-slide-title">{{slide.title}}</div>
+          <img :src="slide.img" width="100%" alt="">
+        </div>
+      </NuxtLink>
     </div>
+    <NuxtLink :to="prefix">
+      <div class="main-body-title-bottom">Перейти к историям</div>
+    </NuxtLink>
   </div>
 </template>
 
@@ -29,17 +24,6 @@ export default {
   data() {
     return {
       prefix: '/history',
-      historyOptions: {
-        navigation: {
-          nextEl: '.history-prev',
-          prevEl: '.history-next'
-        },
-        freeMode: true,
-        slidesPerView: 5,
-        spaceBetween: 20,
-        loop: true,
-        loopFillGroupWithBlank: true,
-      },
       slider: []
     }
   },
@@ -66,7 +50,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.history {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto 0 auto;
+}
   .history-slide {
     width: 184px;
     height: 244px;
@@ -92,6 +81,11 @@ export default {
   .history-main {
     margin-top: 32px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: min-content;
+    margin: 30px auto 0 auto;
   }
   .history-next, .history-prev {
     width: 40px;
