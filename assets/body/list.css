@@ -14,12 +14,15 @@
 }
 .list-filter-type-title > span {
   color: #37424D;
-  font-weight: bold;
+  font-weight: 500;
 }
 .list-filter-sort {
   float: right;
   display: grid;
   grid-template-columns: auto auto;
+}
+.list-filter-sort-title {
+  font-weight: 500;
 }
 .list-filter-sort-dropdown {
   color: #6FC52B;

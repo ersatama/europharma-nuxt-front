@@ -3,7 +3,7 @@
     <div class="main-body-title main-body-title-next main-body-title-main">
       <span>Недавно просмотренные товары</span>
     </div>
-    <product-list :list="items"></product-list>
+    <product-list :list="items" :path="path"></product-list>
     <NuxtLink to="/catalog/recently">
       <div class="main-body-title-bottom">Посмотреть все</div>
     </NuxtLink>
@@ -20,7 +20,8 @@ export default {
   name: "recently",
   data() {
     return {
-      items: []
+      items: [],
+      path: [['Главная',''],['Каталог','/catalog'],['Недавно просмотренные товары','/recently']]
     }
   },
   created() {

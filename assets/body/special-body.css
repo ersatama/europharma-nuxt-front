@@ -5,20 +5,18 @@
   outline: none;
 }
 .menu-item {
-  border: 2px solid #EDECEE;
-  font-size: 18px;
+  border: none;
+  font-size: 13px;
   float: left;
   margin-right: 16px;
   padding: 0 16px 0 16px;
   height: 40px;
   border-radius: 40px;
   background: white;
-  color: #989898;
-  font-weight: 600;
+  color: #000;
+  font-weight: 500;
   outline: none;
 }
 .menu-item:hover, .menu-item-sel {
-  background: rgba(197, 227, 25, 0.2);
-  color: #6FC52B;
-  border: 2px solid #C5E319;
+  background: #C5E319;
 }

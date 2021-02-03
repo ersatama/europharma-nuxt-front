@@ -26,9 +26,9 @@
         <NuxtLink to="/favorites">
           <div class="header-title">Избранное</div>
         </NuxtLink>
-        <button class="login-button-address" @click="modalMap()">
+        <button class="login-button-address" @click="$bvModal.show('map')">
           <div class="login-address-icon"></div>
-          <div>Алматы, пр Аль-Фараби 77/8</div>
+          <div>{{this.$store.state.localStorage.address}}</div>
         </button>
         <NuxtLink to="/login">
           <button class="login-button">Войти</button>
@@ -52,8 +52,6 @@ export default {
     return {
       menu: false,
     }
-  },
-  methods: {
   },
 }
 </script>

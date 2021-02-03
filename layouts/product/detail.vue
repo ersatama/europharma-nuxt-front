@@ -44,7 +44,19 @@
             </div>
             <div class="detail-main-button">
               <div>
-                <button class="detail-main-button-add">Добавить в корзину</button>
+                <template v-if="this.$store.state.localStorage.products.length > 0">
+                  <template v-for="(product,index) in $store.state.localStorage.products">
+                    <div class="detail-main-button-list" v-if="product.item.id === item.id" :key="index">
+                      <button @click="$store.commit('localStorage/addProduct',item)">+</button>
+                      <button>{{product.limit}}</button>
+                      <button @click="$store.commit('localStorage/removeProduct',item)">-</button>
+                    </div>
+                  </template>
+                </template>
+                <template v-if="check()">
+                  <button class="detail-main-button-add" @click="$store.commit('localStorage/addProduct',item)">Добавить в корзину</button>
+                </template>
+
               </div>
             </div>
           </div>
@@ -140,6 +152,18 @@ export default {
   data() {
     return {
       img_index: 0
+    }
+  },
+  methods: {
+    check() {
+      let status  = true;
+      let self    = this;
+      this.$store.state.localStorage.products.forEach(function(value,key,array) {
+        if (array[key].item.id === self.item.id) {
+          status = false;
+        }
+      });
+      return status;
     }
   }
 }

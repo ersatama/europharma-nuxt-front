@@ -76,10 +76,36 @@
 .products-body-price-button {
   background: #37424D;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 30px;
   border: none;
   outline: none;
   width: 50%;
+  outline: none !important;
+  font-size: 16px;
+}
+.products-body-price-button-list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 50%;
+}
+.products-body-price-button-list > button {
+  border: none;
+  font-size: 16px;
+  height: 40px;
+  background: #fff;
+  font-weight: 500;
+  outline: none !important;
+}
+.products-body-price-button-list > button:first-child, .products-body-price-button-list > button:last-child {
+  background: #37424D;
+  color: #fff;
+  border-radius: 30px 8px 8px 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 0;
+}
+.products-body-price-button-list > button:last-child {
+  border-radius: 8px 30px 30px 8px;
 }
 .products-body-price-all {
   align-items: center;

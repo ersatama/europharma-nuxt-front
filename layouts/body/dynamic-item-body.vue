@@ -4,7 +4,7 @@
       <div class="main-body-title"><span>{{title}}</span></div>
       <div class="catalog-body">
         <catalogMenu :filter="filter"></catalogMenu>
-        <productsBody :items="items"></productsBody>
+        <productsBody :items="items" :path="path"></productsBody>
       </div>
     </div>
     <div class="main-body-right">
@@ -23,7 +23,7 @@ import basket from '/layouts/basket/basket.vue'
 
 export default {
   name: "dynamic-item-body",
-  props: ['title','items','status','filter'],
+  props: ['title','items','status','filter','path'],
   components: {
     loader,
     notFound,

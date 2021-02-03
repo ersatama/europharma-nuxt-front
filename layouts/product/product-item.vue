@@ -22,7 +22,18 @@
         <div class="products-body-price-eclub" v-if="item.eclub_discount">{{item.eclub_discount}} ₸</div>
         <div class="products-body-price-all">{{item.price}} ₸</div>
       </div>
-      <button class="products-body-price-button text-white">В корзину</button>
+      <template v-if="this.$store.state.localStorage.products.length > 0">
+        <template v-for="(product,index) in $store.state.localStorage.products">
+          <div class="products-body-price-button-list" v-if="product.item.id === item.id" :key="index">
+            <button @click="$store.commit('localStorage/addProduct',item)">+</button>
+            <button>{{product.limit}}</button>
+            <button @click="$store.commit('localStorage/removeProduct',item)">-</button>
+          </div>
+        </template>
+      </template>
+      <template v-if="check()">
+        <button class="products-body-price-button text-white" @click="$store.commit('localStorage/addProduct',item)">В корзину</button>
+      </template>
     </div>
   </div>
 </template>
@@ -33,57 +44,30 @@ export default {
   name: "product-item",
   data() {
     return {
-      url: ''
+      url: '',
     }
   },
   created() {
     let self  = this;
-    this.path.forEach(function(value, index, arr) {
-      self.url += value[1];
-    })
+    if (this.path) {
+      this.path.forEach(function(value, index, arr) {
+        self.url += value[1];
+      });
+    }
+  },
+  methods: {
+    check() {
+      let status  = true;
+      let self    = this;
+      this.$store.state.localStorage.products.forEach(function(value,key,array) {
+        if (array[key].item.id === self.item.id) {
+          status = false;
+        }
+      });
+      return status;
+    }
   }
 }
-/*
-
-  {
-  "id": 1,
-  "menu_id": 25,
-  "brand_id": 16,
-  "barcode": "000000001",
-  "url": "/iphone-x",
-  "title": "iPhone X",
-  "description": null,
-  "price": "11111",
-  "discount": "11111",
-  "limit": "1",
-  "quantity": "1",
-  "quantity_type": "шт",
-  "eclub": null,
-  "eclub_limit": null,
-  "eclub_discount": null,
-  "parent_id": 0,
-  "lft": 0,
-  "rgt": 0,
-  "depth": 0,
-  "status": "active",
-  "created_at": "2021-01-28T07:13:20.000000Z",
-  "updated_at": "2021-01-28T07:13:20.000000Z",
-  "img": [
-    {
-      "img": "http://127.0.0.1:8000/img/img.png"
-    },
-    {
-      "img": "http://127.0.0.1:8000/img/img.png"
-    },
-    {
-      "img": "http://127.0.0.1:8000/img/img.png"
-    },
-    {
-      "img": "http://127.0.0.1:8000/img/img.png"
-    }
-  ]
-}
- */
 </script>
 
 <style>

@@ -16,6 +16,7 @@
     "axios": "^0.21.1",
     "bootstrap-vue": "^2.21.2",
     "nuxt": "^2.14.12",
+    "nuxt-vuex-localstorage": "^1.2.7",
     "swiper": "5.4.5",
     "tiny-slider": "^2.9.3",
     "vue-agile": "^1.1.3",

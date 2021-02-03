@@ -6,7 +6,7 @@
         <button class="menu-item" :class="[(sel === index)?'menu-item-sel':'']" v-for="(field,index) in menu" :key="index" @click="sel = index">{{field.title}}</button>
       </div>
       <productMenu :url="url"></productMenu>
-      <listBody :list="items"></listBody>
+      <listBody :list="items" :path="path"></listBody>
     </div>
     <div class="main-body-right">
       <basket></basket>
@@ -22,6 +22,7 @@ import productMenu from '/layouts/product/productMenu'
 import listBody from '/layouts/body/list'
 
 export default {
+  props: ['path'],
   name: "special-body",
   components: {
     basket,

@@ -11,7 +11,7 @@ module.exports = {
       })
     }
   },
-  modules: ['bootstrap-vue/nuxt'],
+  modules: ['bootstrap-vue/nuxt','nuxt-vuex-localstorage'],
   head: {
     title: 'europharma',
     meta: [

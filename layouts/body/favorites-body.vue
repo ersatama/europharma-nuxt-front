@@ -2,7 +2,7 @@
   <div class="main-body">
     <div class="main-body-left">
       <div class="main-body-title"><span>Избранное</span></div>
-      <listBody :list="items"></listBody>
+      <listBody :list="items" :path="path"></listBody>
     </div>
     <div class="main-body-right">
       <basket></basket>
@@ -16,6 +16,7 @@ import axios from 'axios'
 import basket from '/layouts/basket/basket.vue'
 import listBody from '/layouts/body/list'
 export default {
+  props: ['path'],
   name: "favorites-body",
   components: {
     basket,

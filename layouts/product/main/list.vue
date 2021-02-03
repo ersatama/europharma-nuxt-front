@@ -1,6 +1,6 @@
 <template>
   <div class="row main-body-items">
-    <item v-for="(item,index) in list" :key="index" :item="item"></item>
+    <item v-for="(item,index) in list" :key="index" :item="item" :path="path"></item>
   </div>
 </template>
 
@@ -10,8 +10,7 @@ export default {
   components: {
     item
   },
-  props: ['list'],
-  name: "list",
+  props: ['list','path'],
 }
 </script>
 <style scoped>

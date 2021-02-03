@@ -8,7 +8,7 @@
     <template v-else-if="status === 1">
       <breadCrumb :path="path"></breadCrumb>
       <div class="container-fluid m-0 p-0">
-        <dynamicItemBody :title="title" :items="items" :status="status" :filter="filter"></dynamicItemBody>
+        <dynamicItemBody :title="title" :items="items" :status="status" :filter="filter" :path="path"></dynamicItemBody>
       </div>
     </template>
     <template v-else>

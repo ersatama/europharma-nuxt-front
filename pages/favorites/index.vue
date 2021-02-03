@@ -4,7 +4,7 @@
     <subMenu></subMenu>
     <breadCrumb :path="path"></breadCrumb>
     <div class="container-fluid m-0 p-0">
-      <favoritesBody></favoritesBody>
+      <favoritesBody :path="path"></favoritesBody>
     </div>
     <footerContent></footerContent>
   </div>

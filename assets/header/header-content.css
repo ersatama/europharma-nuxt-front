@@ -88,7 +88,7 @@ body {
 }
 .login-button, .login-button-address {
   height: 40px;
-  outline: none;
+  outline: none !important;
   background: #C5E319;
   border-radius: 30px;
   cursor: pointer;

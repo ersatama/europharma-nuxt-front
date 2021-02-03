@@ -3,7 +3,7 @@
     <div class="main-body-title main-body-title-next main-body-title-main">
       <span>Акции и специальные предложения</span>
     </div>
-    <product-list :list="items"></product-list>
+    <product-list :list="items" :path="path"></product-list>
     <NuxtLink to="/catalog/special">
       <div class="main-body-title-bottom">Посмотреть все</div>
     </NuxtLink>
@@ -20,7 +20,8 @@ export default {
   },
   data() {
     return {
-      items: []
+      items: [],
+      path: [['Главная',''],['Каталог','/catalog'],['Акции и специальные предложения','/special']]
     }
   },
   created() {
