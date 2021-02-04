@@ -18,7 +18,6 @@
   background: #FF5065;
 }
 .products-body-img {
-  width: 240px;
   height: 240px;
   margin: 30px auto 0 auto;
   background: no-repeat center;
@@ -82,6 +81,7 @@
   width: 50%;
   outline: none !important;
   font-size: 16px;
+  line-height: 1;
 }
 .products-body-price-button-list {
   display: grid;
@@ -120,4 +120,25 @@
 }
 .products-body-price-line {
   color: #FF5065;
+}
+@media only screen and (max-width: 1600px) {
+  .products-body-item {
+    min-width: 240px;
+  }
+  .products-body-img {
+    height: 180px;
+  }
+  .products-body-eclub, .products-body-discount {
+    font-size: 13px;
+  }
+  .products-body-title {
+    margin-top: 15px;
+  }
+  .products-body-price-button {
+    height: 30px;
+    font-size: 14px;
+  }
+  .products-body-price-button-list > button {
+    height: 30px;
+  }
 }

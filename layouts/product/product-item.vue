@@ -2,8 +2,8 @@
   <div class="products-body-item">
     <div class="products-body-discount" v-if="item.discount">-75%</div>
     <div class="products-body-eclub" v-if="item.eclub">eClub -15%</div>
-    <div class="products-body-img" :style="{'background-image':'url('+item.img[0].img+')'}"></div>
     <NuxtLink :to="url+item.url">
+      <div class="products-body-img" :style="{'background-image':'url('+item.img[0].img+')'}"></div>
       <div class="products-body-title">{{item.title}}</div>
     </NuxtLink>
     <div class="products-body-rating">
@@ -32,7 +32,7 @@
         </template>
       </template>
       <template v-if="check()">
-        <button class="products-body-price-button text-white" @click="$store.commit('localStorage/addProduct',item)">В корзину</button>
+        <button class="products-body-price-button text-white" @click="add(item)">В корзину</button>
       </template>
     </div>
   </div>
@@ -65,6 +65,13 @@ export default {
         }
       });
       return status;
+    },
+    add(item) {
+      if (this.$store.state.localStorage.address !== 'не выбрано') {
+        this.$store.commit('localStorage/addProduct',item);
+      } else {
+        this.$bvModal.show('map')
+      }
     }
   }
 }

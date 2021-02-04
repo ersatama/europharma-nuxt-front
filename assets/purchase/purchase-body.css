@@ -15,6 +15,11 @@
   font-weight: 500;
   margin: 20px 30px 0 30px;
 }
+.purchase-form-desc {
+  font-size: 14px;
+  color: #A2A2A2;
+  margin: 5px 0 0 30px;
+}
 .purchase-form-split, .purchase-form-single {
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -47,12 +52,15 @@
   overflow: hidden;
   padding: 20px 20px 0 0;
 }
-.purchase-map-content {
+.purchase-map-content, .purchase-map-content-payment {
   height: 100%;
   width: 100%;
   position: relative;
-  background: #EFEFEF;
   overflow: hidden;
+  border-radius: 8px;
+}
+.purchase-map-content-payment {
+  height: 300px;
 }
 .purchase-footer {
   grid-column-start: 1;
@@ -115,4 +123,100 @@
   font-size: 16px;
   font-weight: 500;
   outline: none !important;
+}
+.purchase-form-list {
+  overflow: hidden;
+  margin: 20px 0 0 30px;
+  font-size: 14px;
+  display: table;
+  padding: 5px 25px 5px 25px;
+  border-radius: 30px;
+  color: #A2A2A2;
+  cursor: pointer;
+}
+.purchase-form-list:hover, .purchase-form-list-sel {
+  background: #C5E319;
+  color: #fff;
+}
+.purchase-form-list > div {
+  display: flex;
+  align-items: center;
+}
+.purchase-form-list-name {
+  font-weight: 500;
+  color: #000;
+  font-size: 16px;
+}
+.purchase-form-list-desc {
+  font-size: 11px;
+}
+.purchase-form-surrender {
+  margin: 10px 0 0 30px;
+  display: table;
+  font-size: 14px;
+}
+.purchase-form-surrender-title {
+  color: #A2A2A2;
+  margin: 0 0 5px 10px;
+  font-size: 12px;
+}
+.purchase-form-surrender-input {
+  border-radius: 30px;
+  height: 40px;
+  border: none;
+  background: #EFEFEF;
+  padding: 0 20px 0 20px;
+  min-width: 200px;
+}
+.purchase-map-return {
+  border-radius: 30px;
+  height: 40px;
+  width: 100%;
+  margin: 20px 0 0 0;
+  background: #37424D;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  outline: none !important;
+}
+@media only screen and (max-width: 1600px) {
+  .purchase-body {
+    gap: 10px
+  }
+  .purchase-form-title {
+    font-size: 18px;
+  }
+  .purchase-form-group-title {
+    font-size: 13px;
+  }
+  .purchase-form-group-input {
+    height: 35px;
+    font-size: 13px;
+  }
+  .purchase-footer-time-title {
+    font-size: 15px;
+  }
+  .purchase-footer-time-change {
+    font-size: 13px;
+  }
+  .purchase-footer-price-title {
+    font-size: 13px;
+  }
+  .purchase-footer-price-sum {
+    font-size: 24px;
+  }
+  .purchase-footer-button {
+    height: 35px;
+    font-size: 14px;
+  }
+  .purchase-footer {
+    height: 62px;
+  }
+  .purchase-map-return {
+    font-size: 14px;
+    height: 35px;
+  }
+  .purchase-form-list-name {
+    font-size: 14px;
+  }
 }

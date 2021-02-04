@@ -1,8 +1,8 @@
 .footer-body {
   background: #F9F9F9;
-  min-height: 310px;
   overflow: hidden;
   display: flex;
+  padding: 50px 0 50px 0;
 }
 .footer-body > div {
   align-self: center;
@@ -19,6 +19,10 @@
   width: 335px;
   color: #989898;
   float: left;
+  font-size: 16px;
+}
+.footer-body-right {
+  margin-left: auto;
 }
 .footer-body-left-title, .footer-body-right-title {
   cursor: pointer;
@@ -28,4 +32,13 @@
   float: right;
   width: auto;
   text-align: right;
+}
+@media only screen and (max-width: 1600px) {
+  .footer-body > div {
+    margin: 0 60px 0 60px;
+  }
+  .footer-body-left, .footer-body-right {
+    grid-gap: 10px;
+    font-size: 13px;
+  }
 }

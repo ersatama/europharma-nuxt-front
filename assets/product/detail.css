@@ -205,3 +205,55 @@
 .detail-footer-reviews {
   display: grid;
 }
+@media only screen and (max-width: 1600px) {
+  .detail-main {
+    margin-top: 20px;
+    gap: 15px;
+  }
+  .detail-main-img {
+    width: 300px;
+    height: 300px;
+    grid-template-columns: 60px 230px;
+  }
+  .detail-main-img-list {
+    padding: 5px;
+    gap: 5px;
+  }
+  .detail-main-img-list-item {
+    height: 50px;
+    width: 50px;
+  }
+  .detail-main-info-title {
+    font-size: 15px;
+  }
+  .detail-main-info-description {
+    font-size: 12px;
+  }
+  .detail-main-article {
+    font-size: 13px;
+  }
+  .detail-main-table {
+    font-size: 12px;
+    gap: 4px;
+  }
+  .detail-main-delivery {
+    margin-top: 10px;
+  }
+  .detail-main-description {
+    font-size: 12px;
+  }
+  .detail-main-button-add {
+    height: 35px;
+    font-size: 12px;
+    line-height: 1;
+  }
+  .detail-main-button-list > button {
+    height: 35px;
+  }
+  .detail-footer {
+    margin-top: 20px;
+  }
+  .detail-footer-title-item {
+    font-size: 13px;
+  }
+}

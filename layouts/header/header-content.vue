@@ -28,7 +28,7 @@
         </NuxtLink>
         <button class="login-button-address" @click="$bvModal.show('map')">
           <div class="login-address-icon"></div>
-          <div>{{this.$store.state.localStorage.address}}</div>
+          <div>{{$store.state.localStorage.address}}</div>
         </button>
         <NuxtLink to="/login">
           <button class="login-button">Войти</button>

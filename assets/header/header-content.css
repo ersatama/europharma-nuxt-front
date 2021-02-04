@@ -51,7 +51,8 @@ body {
 .logo {
   width: 128px;
   height: 28px;
-  background: url('../img/e-mart.svg');
+  background: url('../img/e-mart.svg') no-repeat center;
+  background-size: contain;
 }
 .catalog {
   width: 150px;
@@ -68,7 +69,8 @@ body {
 .catalog-icon {
   width: 18px;
   height: 18px;
-  background: url('../img/menu-icon.svg');
+  background: url('../img/menu-icon.svg') no-repeat center;
+  background-size: contain;
 }
 .catalog-text {
   font-size: 20px;
@@ -120,7 +122,6 @@ body {
   grid-template-columns: auto 85px;
 }
 .search-input {
-  color: #92939B;
   margin: 0;
   font-size: 14px;
   line-height: 25px;
@@ -131,6 +132,7 @@ body {
   border-right: none;
   border-radius: 30px 0 0 30px;
   min-width: 300px;
+  color: #000;
 }
 .search-button {
   background: #37424D;
@@ -145,4 +147,54 @@ body {
   height: 57px;
   border-top: 1px solid #EDECEE;
 }
-
+@media only screen and (max-width: 1600px) {
+  .header-right {
+    gap: 10px;
+  }
+  .header-content {
+    margin: 0 60px 0 60px;
+  }
+  .header-title {
+    font-size: 13px;
+  }
+  .logo {
+    width: 100px;
+    height: 24px;
+  }
+  .catalog {
+    width: 125px;
+    height: 45px;
+    border-radius: 30px;
+    margin-left: 14px;
+  }
+  .catalog-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .catalog-text {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-top: -2px;
+  }
+  .login-button, .login-button-address {
+    height: 35px;
+    font-size: 13px;
+  }
+  .login-button-address {
+    padding: 0 14px 0 14px;
+  }
+  .search {
+    max-width: 400px;
+    margin-left: 10px;
+    height: 35px;
+  }
+  .search-input {
+    font-size: 13px;
+    height: 35px;
+    min-width: 230px;
+  }
+  .search-button {
+    font-size: 13px;
+    width: 70px;
+  }
+}

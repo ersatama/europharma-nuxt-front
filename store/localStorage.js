@@ -11,47 +11,47 @@ export const mutations = {
   setCoords(state,coords) {
     state.coords = coords
   },
+  clearProduct(state) {
+    state.products  = [];
+    state.price     = 0;
+  },
   removeProduct(state, product) {
-    let price = 0;
     state.products.forEach(function(value,key,array) {
       if (array[key].item.id === product.id) {
         array[key].limit--;
-        price += array[key].limit * product.price;
         if (array[key].limit === 0) {
           array.splice(key, 1);
         }
       }
     });
+    let price   = 0;
+    state.products.forEach(function(value,key,array) {
+      price += array[key].limit * array[key].item.price;
+    });
     state.price = price;
   },
   addProduct(state,product) {
-    if (state.address !== 'Не выбрано') {
-      let status  = true;
-      let price   = 0;
-      let priceStatus = false;
-      state.products.forEach(function(value,key,array) {
-        if (array[key].item.id === product.id) {
-          status = false;
-          if (array[key].limit < product.quantity) {
-            array[key].limit++;
-            price += product.price * array[key].limit;
-            priceStatus = true;
-          }
+    let status  = true;
+    state.products.forEach(function(value,key,array) {
+      if (array[key].item.id === product.id) {
+        status = false;
+        if (array[key].limit < product.quantity) {
+          array[key].limit++;
         }
-      });
-      if (status) {
-        priceStatus = true;
-        price += product.price * 1;
+      }
+    });
+    if (status) {
+      if (0 < product.quantity) {
         state.products.push({
           limit: 1,
           item: product
         });
       }
-      if (priceStatus) {
-        state.price = price;
-      }
-    } else {
-      this.$bvModal.show('map');
     }
+    let price   = 0;
+    state.products.forEach(function(value,key,array) {
+      price += array[key].limit * array[key].item.price;
+    });
+    state.price = price;
   }
 }

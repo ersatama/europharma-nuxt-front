@@ -54,9 +54,8 @@
                   </template>
                 </template>
                 <template v-if="check()">
-                  <button class="detail-main-button-add" @click="$store.commit('localStorage/addProduct',item)">Добавить в корзину</button>
+                  <button class="detail-main-button-add" @click="add(item)">Добавить в корзину</button>
                 </template>
-
               </div>
             </div>
           </div>
@@ -164,6 +163,13 @@ export default {
         }
       });
       return status;
+    },
+    add(item) {
+      if (this.$store.state.localStorage.address !== 'не выбрано') {
+        this.$store.commit('localStorage/addProduct',item);
+      } else {
+        this.$bvModal.show('map')
+      }
     }
   }
 }

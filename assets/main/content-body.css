@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: auto 360px;
   grid-gap: 20px;
-  width: 100%;
   max-width: 1600px;
   margin: 0 auto 0 auto;
 }
@@ -11,7 +10,8 @@
 }
 .main-body-right {
   overflow: hidden;
-  padding-top: 70px;
+  margin-top: 83px;
+  position: relative;
 }
 .main-body-title-bottom {
   color: #37424D;
@@ -48,8 +48,7 @@
 }
 .main-body-title-center {
   display: table;
-  margin: 20px auto 20px auto;
-  margin: 20px auto 20px auto;
+  margin: 20px auto 20px auto !important;
 }
 .main-body-title-next {
   margin-top: 50px;
@@ -65,11 +64,12 @@
   transform: translate(0,-50%);
 }
 .main-body-items {
-  grid-gap: 20px;
   margin: 0;
   display: inline-flex;
-  flex-wrap: wrap;
+  min-width: 1005px !important;
   width: 100%;
+  gap: 15px;
+  justify-content: space-between;
 }
 .main-body-items > div > div {
   margin: 15px;
@@ -130,4 +130,25 @@
 }
 .basket-btn {
   background: #37424D;
+}
+@media only screen and (max-width: 1600px) {
+  .main-body {
+    margin: 0 60px 0 60px;
+    grid-template-columns: auto 340px;
+  }
+  .main-body-right {
+    margin-top: 64px ;
+  }
+  .main-body-title {
+    font-size: 18px;
+    margin: 15px 0 15px 0;
+  }
+  .main-body-title-bottom {
+    margin: 20px auto 0 auto;
+    padding: 0 30px 0 30px;
+    font-size: 14px;
+  }
+  .main-body-title-center {
+    margin: 15px auto 15px auto !important;
+  }
 }

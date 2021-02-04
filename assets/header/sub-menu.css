@@ -1,12 +1,20 @@
 .sub-menu {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-between;
   max-width: 1600px;
   margin: 20px auto 20px auto;
+  gap: 10px;
 }
 .sub-menu-item {
-  font-size: 16px;
+  font-size: 14px;
   color: #37424D;
-  margin: 0 10px 0 10px;
+  font-weight: 500;
+}
+@media only screen and (max-width: 1600px) {
+  .sub-menu {
+    margin: 15px 60px 15px 60px;
+  }
+  .sub-menu-item {
+    font-size: 13px;
+  }
 }

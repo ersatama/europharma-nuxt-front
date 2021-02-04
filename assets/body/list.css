@@ -65,3 +65,13 @@
 .list-filter-sort-dropdown-list-item:hover {
   background: #EDECEE;
 }
+@media only screen and (max-width: 1600px) {
+  .list {
+    margin-top: 30px;
+  }
+  .list-filter {
+    margin-bottom: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+}

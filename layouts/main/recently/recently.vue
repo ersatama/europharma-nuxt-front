@@ -1,8 +1,10 @@
 <template>
   <div>
-    <div class="main-body-title main-body-title-next main-body-title-main">
-      <span>Недавно просмотренные товары</span>
-    </div>
+    <NuxtLink to="/catalog/recently">
+      <div class="main-body-title main-body-title-next main-body-title-main">
+        <span>Недавно просмотренные товары</span>
+      </div>
+    </NuxtLink>
     <product-list :list="items" :path="path"></product-list>
     <NuxtLink to="/catalog/recently">
       <div class="main-body-title-bottom">Посмотреть все</div>

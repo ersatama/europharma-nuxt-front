@@ -21,6 +21,11 @@ export default {
         ['Спорт и хобби','/gym'],
         ['Продукты','/products'],
         ['Строительство и ремонт','/construction_and_repair'],
+        ['Автотовары','/for_car'],
+        ['Игры','/games'],
+        ['Все для дома','/relax'],
+        ['Продукты','/products'],
+        ['Ноутбуки и компьютеры','/laptop_computer'],
         ['Мать и дитя','/for_children'],
       ]
     }

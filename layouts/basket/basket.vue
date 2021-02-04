@@ -1,7 +1,8 @@
 <template>
-  <div class="basket-content">
+  <div class="basket-content" ref="basket" :class="[[top?'basket-content-fixed':''],[bottom?'basket-content-bottom':'']]">
     <template v-if="$store.state.localStorage.products.length > 0">
       <div class="basket-content-menu">
+        <div class="basket-clear" @click="clearBasket()">Очистить</div>
         <div class="basket-content-title">Мой заказ</div>
         <div class="basket-content-sub-title">бесплатная доставка при сумме заказа от 10000 ₸</div>
         <div class="basket-content-list">
@@ -26,7 +27,7 @@
       </div>
       <template v-if="$route.path !== '/purchase'">
         <NuxtLink to="/purchase">
-          <div class="btn basket-content-button text-white w-100">Сумма заказа {{$store.state.localStorage.price}} ₸</div>
+          <button class="basket-content-button text-white w-100">Сумма заказа {{$store.state.localStorage.price}} ₸</button>
         </NuxtLink>
       </template>
     </template>
@@ -41,7 +42,7 @@
           </div>
         </div>
       </div>
-      <div class="btn basket-content-button-disabled w-100">Оформить заказ</div>
+      <button class="basket-content-button-disabled w-100">Оформить заказ</button>
     </template>
   </div>
 </template>
@@ -50,7 +51,46 @@ export default {
   name: "basket",
   data() {
     return {
-
+      top: false,
+      bottom: false
+    }
+  },
+  mounted() {
+    this.handleScroll();
+  },
+  beforeMount () {
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleScroll);
+  },
+  methods: {
+    clearBasket() {
+      this.$store.commit('localStorage/clearProduct');
+    },
+    handleScroll () {
+      let basket       = this.$refs.basket;
+      let height       = basket.offsetHeight;
+      let parent       = basket.parentNode.getBoundingClientRect();
+      let parentTop    = parent.top;
+      let parentHeight = basket.parentNode.offsetHeight;
+      let heightDiff   = parentHeight - height;
+      if (heightDiff > 0 && parentTop < 20) {
+        let parentFinalHeight = parentHeight + parentTop;
+        let finalHeight       = 20 + height;
+        if (finalHeight < parentFinalHeight) {
+          this.top    = true;
+          this.bottom = false;
+        } else {
+          this.top    = false;
+          this.bottom = true;
+        }
+      } else {
+        this.top    = false;
+        this.bottom = false;
+      }
     }
   }
 }

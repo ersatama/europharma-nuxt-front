@@ -1,0 +1,26 @@
+.brands-main {
+  max-width: 1600px;
+  margin: 0 auto 0 auto;
+}
+.brands {
+  margin-top: 20px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.brand {
+  height: 120px;
+  width: 300px;
+  background: no-repeat center;
+  background-size: contain;
+}
+@media only screen and (max-width: 1600px) {
+  .brands-main {
+    margin: 0 60px 0 60px;
+  }
+  .brand {
+    height: 100px;
+    width: 240px;
+  }
+}

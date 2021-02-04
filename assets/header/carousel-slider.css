@@ -2,7 +2,6 @@
   margin: 0 0 20px 0;
   position: relative;
 }
-
 .slide {
   height: 250px;
   margin: 10px 20px 0 0;
@@ -41,4 +40,10 @@
 .slider-prev {
   right: 50px;
   transform: translate(0,-40%) rotate(180deg);
+}
+@media only screen and (max-width: 1600px) {
+  .slide {
+    height: 220px;
+    margin-top: 5px;
+  }
 }

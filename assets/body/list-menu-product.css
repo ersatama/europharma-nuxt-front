@@ -20,3 +20,8 @@
   background: #C5E319;
   color: black;
 }
+@media only screen and (max-width: 1600px) {
+  .list {
+    margin-top: 30px;
+  }
+}

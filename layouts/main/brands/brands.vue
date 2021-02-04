@@ -48,23 +48,6 @@ export default {
 }
 </script>
 
-<style scoped>
-  .brands-main {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto 0 auto;
-  }
-  .brands {
-    margin-top: 20px;
-    gap: 20px;
-    display: flex;
-    justify-content: space-between;
-    grid-gap: 20px;
-  }
-  .brand {
-    height: 120px;
-    width: 300px;
-    background: no-repeat center;
-    background-size: contain;
-  }
+<style>
+@import "assets/main/brands.css";
 </style>

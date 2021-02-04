@@ -2,7 +2,6 @@
   overflow: hidden;
   position: relative;
   margin-top: 32px;
-  padding: 5px;
 }
 .product-menu-list {
   display: flex;
@@ -12,7 +11,6 @@
 .product-slide {
   overflow: hidden;
   border-radius: 30px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
   position: relative;
   cursor: pointer;
   display: flex;
@@ -23,7 +21,6 @@
 }
 .product-slide:hover, .product-slide-sel {
   background: #C5E319;
-  box-shadow: 0 0 1px 0 #6FC52B;
 }
 .product-slide-img {
   width: 20px;
@@ -37,4 +34,12 @@
   font-weight: 500;
   font-size: 13px;
   color: #37424D;
+}
+@media only screen and (max-width: 1600px) {
+  .product-menu {
+    margin-top: 20px;
+  }
+  .product-slide {
+    padding: 5px 10px 5px 10px;
+  }
 }
